@@ -20,6 +20,7 @@ declare global {
 export function AdSlot({
   slot,
   format = "auto",
+  width,
   height,
   label = "Advertisement",
   className,
@@ -27,6 +28,13 @@ export function AdSlot({
   /** AdSense ad-unit id. Rendering is skipped until both this and the client id exist. */
   slot?: string;
   format?: "auto" | "rectangle" | "vertical" | "horizontal";
+  /**
+   * Reserved width in pixels — always a standard IAB unit (728×90 leaderboard,
+   * 336×280 medium rectangle, 300×600 half page). The slot is capped at this
+   * and centred rather than stretched edge to edge: a full-bleed empty box
+   * reads as broken content, and AdSense never fills one that wide anyway.
+   */
+  width: number;
   /** Reserved height in pixels. Must match the unit's real height. */
   height: number;
   label?: string;
@@ -50,11 +58,13 @@ export function AdSlot({
     <aside
       aria-label={label}
       className={cn(
-        "flex items-center justify-center overflow-hidden rounded-lg",
+        "mx-auto flex w-full items-center justify-center overflow-hidden rounded-lg",
         configured ? "" : "border border-dashed border-border bg-surface/50",
         className,
       )}
-      style={{ height }}
+      // Width is a cap, not a floor, so a 728px leaderboard still fits a
+      // 360px phone; the reserved height is what keeps CLS at zero.
+      style={{ maxWidth: width, height }}
     >
       {configured ? (
         <ins
@@ -63,10 +73,11 @@ export function AdSlot({
           data-ad-client={CLIENT_ID}
           data-ad-slot={slot}
           data-ad-format={format}
-          data-full-width-responsive="true"
+          // Fixed units must opt out, or AdSense overrides the size we reserved.
+          data-full-width-responsive="false"
         />
       ) : (
-        <span className="text-[11px] tracking-wide text-muted uppercase">
+        <span className="text-[11px] tracking-wide text-muted-subtle uppercase">
           {label}
         </span>
       )}

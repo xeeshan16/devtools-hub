@@ -15,7 +15,9 @@ export function Header() {
           <span className="flex h-7 w-7 items-center justify-center rounded-md bg-accent text-accent-fg">
             <Terminal className="h-4 w-4" aria-hidden />
           </span>
-          {site.name}
+          {/* The wordmark is the one place the mono face is decorative rather
+              than functional — body copy stays on Inter for readability. */}
+          <span className="font-mono tracking-tight">{site.name}</span>
         </Link>
 
         <nav className="ml-2 hidden items-center gap-4 text-sm text-muted sm:flex">

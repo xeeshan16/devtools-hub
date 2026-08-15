@@ -10,7 +10,9 @@ export function Footer() {
       <div className="mx-auto w-full max-w-6xl px-4 py-10 lg:px-6">
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-5">
           <div className="lg:col-span-2">
-            <p className="text-sm font-semibold text-foreground">{site.name}</p>
+            <p className="font-mono text-sm font-semibold tracking-tight text-foreground">
+              {site.name}
+            </p>
             <p className="mt-2 max-w-xs text-xs leading-6 text-muted">
               {site.tagline}. Every tool runs entirely in your browser — nothing
               you paste is uploaded, logged or stored.

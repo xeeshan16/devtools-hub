@@ -11,7 +11,13 @@
   --surface: oklch(0.975 0.001 250);
   --surface-2: oklch(0.955 0.002 250);
   --foreground: oklch(0.21 0.006 250);
-  --muted: oklch(0.51 0.008 250);
+  /* Body/secondary text. Kept at WCAG AAA (7:1) against every surface rather
+     than the 4.5:1 AA floor — most of it renders at 12–13px, where the floor
+     reads as thin. */
+  --muted: oklch(0.43 0.008 250);
+  /* Structural labels only (category headings, ad slugs, example row labels).
+     Deliberately quieter than --muted, but still AA at 5:1. */
+  --muted-subtle: oklch(0.51 0.008 250);
   --border: oklch(0.9 0.004 250);
   --border-strong: oklch(0.84 0.006 250);
 
@@ -32,7 +38,8 @@
   --surface: oklch(0.2 0.005 250);
   --surface-2: oklch(0.24 0.006 250);
   --foreground: oklch(0.93 0.003 250);
-  --muted: oklch(0.65 0.008 250);
+  --muted: oklch(0.71 0.008 250);
+  --muted-subtle: oklch(0.65 0.008 250);
   --border: oklch(0.29 0.006 250);
   --border-strong: oklch(0.37 0.008 250);
 
@@ -52,6 +59,7 @@
   --color-surface-2: var(--surface-2);
   --color-foreground: var(--foreground);
   --color-muted: var(--muted);
+  --color-muted-subtle: var(--muted-subtle);
   --color-border: var(--border);
   --color-border-strong: var(--border-strong);
   --color-accent: var(--accent);
@@ -125,5 +133,5 @@
   font-weight: 600;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: var(--muted);
+  color: var(--muted-subtle);
 }

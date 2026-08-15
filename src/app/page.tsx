@@ -38,10 +38,12 @@ export default function Home() {
         <ToolBrowser />
       </section>
 
-      {/* Below the fold, per design doc §4.1 — never above the tool grid. */}
+      {/* Below the fold, per design doc §4.1 — never above the tool grid.
+          728×90 leaderboard: the standard unit for a full-width content break. */}
       <AdSlot
         slot={process.env.NEXT_PUBLIC_ADSENSE_SLOT_HOME}
-        height={280}
+        width={728}
+        height={90}
         format="horizontal"
         className="mt-12"
       />
