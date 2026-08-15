@@ -8,7 +8,7 @@ export const site = {
   tagline: "Fast, private developer utilities",
   description:
     "A suite of free developer tools — JSON formatter, Base64 encoder, JWT decoder, regex tester and more. Everything runs in your browser; nothing is uploaded.",
-  url: (process.env.NEXT_PUBLIC_SITE_URL ?? "https://devtools-hub.vercel.app").replace(
+  url: (process.env.NEXT_PUBLIC_SITE_URL ?? "https://devtools-hub-sigma.vercel.app").replace(
     /\/$/,
     "",
   ),
