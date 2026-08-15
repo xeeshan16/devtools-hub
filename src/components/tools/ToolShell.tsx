@@ -58,11 +58,12 @@ export function ToolShell({
           <div className="min-w-0 flex-1">
             {children}
 
-            {/* Mobile ad: inline, below the tool. */}
+            {/* Mobile ad: 336×280 medium rectangle, the in-content standard. */}
             <AdSlot
               slot={process.env.NEXT_PUBLIC_ADSENSE_SLOT_INLINE}
+              width={336}
               height={280}
-              format="horizontal"
+              format="rectangle"
               className="mt-6 lg:hidden"
             />
 
@@ -126,13 +127,14 @@ export function ToolShell({
             </div>
           </div>
 
-          {/* Desktop ad: sticky sidebar rail, reserved from first paint. */}
+          {/* Desktop ad: 300×600 half page, sticky, reserved from first paint. */}
           <div className="hidden w-[300px] shrink-0 lg:block">
             <AdSlot
               slot={process.env.NEXT_PUBLIC_ADSENSE_SLOT_SIDEBAR}
+              width={300}
               height={600}
               format="vertical"
-              className="sticky top-20 w-[300px]"
+              className="sticky top-20"
             />
           </div>
         </div>
@@ -169,7 +171,7 @@ function ExampleRow({
 }) {
   return (
     <div className="border-t border-border first:border-t-0">
-      <div className="px-3 pt-2 text-[10px] font-semibold tracking-wider text-muted uppercase">
+      <div className="px-3 pt-2 text-[10px] font-semibold tracking-wider text-muted-subtle uppercase">
         {label}
       </div>
       <pre

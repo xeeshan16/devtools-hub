@@ -48,10 +48,14 @@ export function ToolBrowser() {
       <div className="mt-8 space-y-8">
         {groups.map((group) => (
           <section key={group.category}>
-            <h2 className="text-[11px] font-semibold tracking-wider text-muted uppercase">
+            <h2 className="text-[11px] font-semibold tracking-wider text-muted-subtle uppercase">
               {group.category}
             </h2>
-            <div className="mt-3 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+            {/* Two columns, not three. Categories hold 1–3 tools each, so a
+                three-column track left a third of every short category empty
+                and wrapped the longer taglines onto a second line, making
+                neighbouring cards different heights. */}
+            <div className="mt-3 grid gap-3 sm:grid-cols-2">
               {group.tools.map((tool) => (
                 <ToolCard key={tool.slug} tool={tool} />
               ))}
