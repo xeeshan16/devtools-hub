@@ -1,7 +1,6 @@
 import { Analytics } from "@vercel/analytics/next";
 import type { Metadata, Viewport } from "next";
 import { Inter, JetBrains_Mono } from "next/font/google";
-import Script from "next/script";
 import { CommandPalette } from "@/components/layout/CommandPalette";
 import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
@@ -67,6 +66,20 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       suppressHydrationWarning
       className={`${inter.variable} ${jetbrainsMono.variable} h-full antialiased`}
     >
+      <head>
+        {/* A plain tag, not next/script, because AdSense's ownership-verification
+            crawler reads the raw HTML response and does not execute JS. Every
+            next/script strategy — beforeInteractive included — only leaves a
+            <link rel="preload"> in that response; the real <script> tag is
+            inserted by Next's client runtime, which a non-JS crawler never runs. */}
+        {adsenseClient ? (
+          <script
+            async
+            crossOrigin="anonymous"
+            src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${adsenseClient}`}
+          />
+        ) : null}
+      </head>
       <body className="flex min-h-full flex-col">
         <ThemeProvider>
           <Header />
@@ -75,15 +88,6 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           <CommandPalette />
         </ThemeProvider>
         <Analytics />
-
-        {adsenseClient ? (
-          <Script
-            async
-            strategy="afterInteractive"
-            crossOrigin="anonymous"
-            src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${adsenseClient}`}
-          />
-        ) : null}
       </body>
     </html>
   );
