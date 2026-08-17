@@ -2,10 +2,15 @@ import {
   Binary,
   Braces,
   CalendarClock,
+  CaseSensitive,
   Clock,
   FileJson,
+  FileSignature,
   Fingerprint,
+  GitCompare,
+  Hash,
   KeyRound,
+  RectangleEllipsis,
   Regex,
   type LucideIcon,
 } from "lucide-react";
@@ -15,6 +20,7 @@ export const TOOL_CATEGORIES = [
   "Encoding",
   "Generators",
   "Text & Data",
+  "AI Tools",
 ] as const;
 
 export type ToolCategory = (typeof TOOL_CATEGORIES)[number];
@@ -102,8 +108,21 @@ export const TOOLS: Tool[] = [
     category: "Encoding",
     icon: KeyRound,
     keywords: ["jwt", "json web token", "bearer", "claims", "exp", "auth"],
-    related: ["base64-encoder-decoder", "json-formatter", "timestamp-converter"],
+    related: ["base64-encoder-decoder", "json-formatter", "jwt-encoder"],
     phase: 2,
+  },
+  {
+    slug: "jwt-encoder",
+    name: "JWT Encoder",
+    seoTitle: "JWT Encoder — Sign a JSON Web Token Online",
+    tagline: "Build and sign a JSON Web Token with HS256/384/512",
+    description:
+      "Build and sign a JSON Web Token with HS256, HS384 or HS512. An educational and testing tool — signing runs in your browser, but never paste a real production secret.",
+    category: "Encoding",
+    icon: FileSignature,
+    keywords: ["jwt", "encode", "sign", "json web token", "hs256", "hmac", "generate token"],
+    related: ["jwt-decoder", "base64-encoder-decoder", "json-formatter"],
+    phase: 3,
   },
   {
     slug: "regex-tester",
@@ -143,6 +162,58 @@ export const TOOLS: Tool[] = [
     keywords: ["yaml", "yml", "json", "convert", "kubernetes", "openapi"],
     related: ["json-formatter", "cron-parser", "base64-encoder-decoder"],
     phase: 2,
+  },
+  {
+    slug: "diff-checker",
+    name: "Diff Checker",
+    seoTitle: "Diff Checker — Compare Text Line by Line or Word by Word",
+    tagline: "Compare two blocks of text and highlight what changed",
+    description:
+      "Compare two blocks of text and see exactly what changed, line by line or word by word, with additions and deletions highlighted. Runs entirely in your browser.",
+    category: "Text & Data",
+    icon: GitCompare,
+    keywords: ["diff", "compare", "text compare", "changes", "line diff", "word diff"],
+    related: ["regex-tester", "case-converter", "json-formatter"],
+    phase: 3,
+  },
+  {
+    slug: "password-generator",
+    name: "Password Generator",
+    seoTitle: "Password Generator — Strong, Random & Free",
+    tagline: "Generate strong random passwords with an entropy meter",
+    description:
+      "Generate a strong, random password with adjustable length and character types, plus a strength meter based on real entropy. Runs entirely in your browser.",
+    category: "Generators",
+    icon: RectangleEllipsis,
+    keywords: ["password", "generator", "random", "strong password", "entropy", "secure"],
+    related: ["uuid-generator", "jwt-decoder", "base64-encoder-decoder"],
+    phase: 3,
+  },
+  {
+    slug: "token-counter",
+    name: "Token Counter",
+    seoTitle: "Token Counter — GPT, Claude & Gemini, Free",
+    tagline: "Count tokens for GPT, Claude and Gemini prompts",
+    description:
+      "Count tokens in a prompt for GPT-4, GPT-4o, Claude and Gemini. GPT counts use the real tokenizer; Claude and Gemini are clearly labeled estimates.",
+    category: "AI Tools",
+    icon: Hash,
+    keywords: ["tokens", "tokenizer", "gpt", "claude", "gemini", "tiktoken", "prompt", "context window"],
+    related: ["case-converter", "regex-tester", "diff-checker"],
+    phase: 3,
+  },
+  {
+    slug: "case-converter",
+    name: "Case Converter",
+    seoTitle: "Case Converter — camelCase, snake_case, kebab-case & More",
+    tagline: "Convert text between camelCase, snake_case and more",
+    description:
+      "Convert text or an identifier between UPPERCASE, lowercase, Title Case, Sentence case, camelCase, PascalCase, snake_case and kebab-case, all at once.",
+    category: "Text & Data",
+    icon: CaseSensitive,
+    keywords: ["case", "camelcase", "snake case", "kebab case", "pascalcase", "title case", "convert"],
+    related: ["json-formatter", "regex-tester", "yaml-json-converter"],
+    phase: 3,
   },
 ];
 
