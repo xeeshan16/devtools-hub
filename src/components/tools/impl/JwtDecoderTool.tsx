@@ -1,11 +1,13 @@
 "use client";
 
 import { CircleAlert, CircleCheck, Info, TriangleAlert } from "lucide-react";
+import Link from "next/link";
 import { useMemo, useState } from "react";
 import { CopyButton } from "@/components/tools/CopyButton";
 import { InputPanel } from "@/components/tools/InputPanel";
 import { Panel } from "@/components/tools/Panel";
 import { decodeJwt, type JwtClaimNote } from "@/lib/tools/jwt";
+import { toolPath } from "@/lib/tools/registry";
 
 const SAMPLE =
   "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkFkYSBMb3ZlbGFjZSIsImlhdCI6MTcxNzI0MzIwMCwiZXhwIjoxNzE3MjQ2ODAwLCJpc3MiOiJkZXZ0b29scy1odWIifQ.7bMBjBK2SbTfeJZlZ7ZJhTxRWQzYyXQ0uZ0JwZKbT2Q";
@@ -36,6 +38,14 @@ export function JwtDecoderTool() {
 
   return (
     <div className="space-y-4">
+      <p className="text-xs text-muted">
+        Need to sign a token instead?{" "}
+        <Link href={toolPath("jwt-encoder")} className="text-accent hover:underline">
+          Try the JWT Encoder
+        </Link>
+        .
+      </p>
+
       <div className="grid gap-4 lg:grid-cols-2">
         <InputPanel
           value={input}
