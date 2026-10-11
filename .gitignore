@@ -40,3 +40,8 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# local assistant/editor files (next dev regenerates AGENTS.md)
+AGENTS.md
+CLAUDE.md
+.claude/
