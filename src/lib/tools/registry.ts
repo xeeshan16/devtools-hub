@@ -10,6 +10,7 @@ import {
   GitCompare,
   Hash,
   KeyRound,
+  Link2,
   RectangleEllipsis,
   Regex,
   type LucideIcon,
@@ -69,7 +70,7 @@ export const TOOLS: Tool[] = [
     category: "Encoding",
     icon: Binary,
     keywords: ["base64", "base64url", "btoa", "atob", "encode", "decode"],
-    related: ["jwt-decoder", "json-formatter", "uuid-generator"],
+    related: ["jwt-decoder", "json-formatter", "uuid-generator", "url-encoder-decoder"],
     phase: 1,
   },
   {
@@ -122,6 +123,19 @@ export const TOOLS: Tool[] = [
     icon: FileSignature,
     keywords: ["jwt", "encode", "sign", "json web token", "hs256", "hmac", "generate token"],
     related: ["jwt-decoder", "base64-encoder-decoder", "json-formatter"],
+    phase: 3,
+  },
+  {
+    slug: "url-encoder-decoder",
+    name: "URL Encoder / Decoder",
+    seoTitle: "URL Encoder & Decoder — Percent-Encoding Online",
+    tagline: "Percent-encode and decode URLs and query strings",
+    description:
+      "Percent-encode text for a URL or decode it back, as a single component or a full URL, with form (+) encoding and clear errors for malformed escapes.",
+    category: "Encoding",
+    icon: Link2,
+    keywords: ["url", "percent encoding", "urlencode", "urldecode", "encodeURIComponent", "query string", "escape"],
+    related: ["base64-encoder-decoder", "jwt-decoder", "json-formatter"],
     phase: 3,
   },
   {

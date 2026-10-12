@@ -10,6 +10,7 @@ import { passwordGeneratorContent } from "./password-generator";
 import { regexTesterContent } from "./regex-tester";
 import { timestampConverterContent } from "./timestamp-converter";
 import { tokenCounterContent } from "./token-counter";
+import { urlEncoderContent } from "./url-encoder-decoder";
 import { uuidGeneratorContent } from "./uuid-generator";
 import { yamlJsonContent } from "./yaml-json-converter";
 
@@ -28,6 +29,7 @@ export const TOOL_CONTENT: Record<string, ToolContent> = {
   "diff-checker": diffCheckerContent,
   "jwt-encoder": jwtEncoderContent,
   "token-counter": tokenCounterContent,
+  "url-encoder-decoder": urlEncoderContent,
 };
 
 export function getToolContent(slug: string): ToolContent {
