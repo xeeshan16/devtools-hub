@@ -3,6 +3,7 @@ import { base64Content } from "./base64-encoder-decoder";
 import { caseConverterContent } from "./case-converter";
 import { cronParserContent } from "./cron-parser";
 import { diffCheckerContent } from "./diff-checker";
+import { hashGeneratorContent } from "./hash-generator";
 import { jsonFormatterContent } from "./json-formatter";
 import { jwtDecoderContent } from "./jwt-decoder";
 import { jwtEncoderContent } from "./jwt-encoder";
@@ -30,6 +31,7 @@ export const TOOL_CONTENT: Record<string, ToolContent> = {
   "jwt-encoder": jwtEncoderContent,
   "token-counter": tokenCounterContent,
   "url-encoder-decoder": urlEncoderContent,
+  "hash-generator": hashGeneratorContent,
 };
 
 export function getToolContent(slug: string): ToolContent {

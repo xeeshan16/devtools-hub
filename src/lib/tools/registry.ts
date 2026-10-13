@@ -13,6 +13,7 @@ import {
   Link2,
   RectangleEllipsis,
   Regex,
+  ShieldCheck,
   type LucideIcon,
 } from "lucide-react";
 
@@ -70,7 +71,7 @@ export const TOOLS: Tool[] = [
     category: "Encoding",
     icon: Binary,
     keywords: ["base64", "base64url", "btoa", "atob", "encode", "decode"],
-    related: ["jwt-decoder", "json-formatter", "uuid-generator", "url-encoder-decoder"],
+    related: ["jwt-decoder", "json-formatter", "uuid-generator", "url-encoder-decoder", "hash-generator"],
     phase: 1,
   },
   {
@@ -122,7 +123,7 @@ export const TOOLS: Tool[] = [
     category: "Encoding",
     icon: FileSignature,
     keywords: ["jwt", "encode", "sign", "json web token", "hs256", "hmac", "generate token"],
-    related: ["jwt-decoder", "base64-encoder-decoder", "json-formatter"],
+    related: ["jwt-decoder", "base64-encoder-decoder", "json-formatter", "hash-generator"],
     phase: 3,
   },
   {
@@ -136,6 +137,19 @@ export const TOOLS: Tool[] = [
     icon: Link2,
     keywords: ["url", "percent encoding", "urlencode", "urldecode", "encodeURIComponent", "query string", "escape"],
     related: ["base64-encoder-decoder", "jwt-decoder", "json-formatter"],
+    phase: 3,
+  },
+  {
+    slug: "hash-generator",
+    name: "Hash Generator",
+    seoTitle: "SHA-256 Hash Generator — SHA-1, SHA-384, SHA-512",
+    tagline: "Generate and verify SHA-1, SHA-256, SHA-384 and SHA-512 hashes",
+    description:
+      "Generate SHA-1, SHA-256, SHA-384 and SHA-512 hashes of any text in hex or Base64, and verify a known checksum. Runs entirely in your browser.",
+    category: "Generators",
+    icon: ShieldCheck,
+    keywords: ["hash", "sha256", "sha-256", "sha1", "sha512", "checksum", "digest", "sri", "integrity"],
+    related: ["base64-encoder-decoder", "password-generator", "jwt-encoder"],
     phase: 3,
   },
   {
@@ -200,7 +214,7 @@ export const TOOLS: Tool[] = [
     category: "Generators",
     icon: RectangleEllipsis,
     keywords: ["password", "generator", "random", "strong password", "entropy", "secure"],
-    related: ["uuid-generator", "jwt-decoder", "base64-encoder-decoder"],
+    related: ["uuid-generator", "jwt-decoder", "base64-encoder-decoder", "hash-generator"],
     phase: 3,
   },
   {

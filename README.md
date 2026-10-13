@@ -12,7 +12,7 @@ Fast, private developer utilities that run entirely in your browser. Paste a JWT
 | --- | --- |
 | Formatting | JSON Formatter & Validator, YAML ⇄ JSON Converter |
 | Encoding | Base64 / Base64URL, URL Encoder / Decoder, JWT Decoder, JWT Encoder |
-| Generators | UUID Generator (v4, v7), Password Generator |
+| Generators | UUID Generator (v4, v7), Password Generator, Hash Generator (SHA-1/256/384/512) |
 | Text & Data | Timestamp Converter, Regex Tester, Cron Expression Parser, Case Converter, Diff Checker |
 | AI Tools | Token Counter |
 
