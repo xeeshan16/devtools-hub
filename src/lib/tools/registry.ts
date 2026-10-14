@@ -2,6 +2,7 @@ import {
   Binary,
   Braces,
   CalendarClock,
+  Calculator,
   CaseSensitive,
   Clock,
   FileJson,
@@ -71,7 +72,7 @@ export const TOOLS: Tool[] = [
     category: "Encoding",
     icon: Binary,
     keywords: ["base64", "base64url", "btoa", "atob", "encode", "decode"],
-    related: ["jwt-decoder", "json-formatter", "uuid-generator", "url-encoder-decoder", "hash-generator"],
+    related: ["jwt-decoder", "json-formatter", "uuid-generator", "url-encoder-decoder", "hash-generator", "number-base-converter"],
     phase: 1,
   },
   {
@@ -97,7 +98,7 @@ export const TOOLS: Tool[] = [
     category: "Text & Data",
     icon: Clock,
     keywords: ["unix", "epoch", "timestamp", "date", "iso 8601", "utc", "time"],
-    related: ["cron-parser", "uuid-generator", "jwt-decoder"],
+    related: ["cron-parser", "uuid-generator", "jwt-decoder", "number-base-converter"],
     phase: 1,
   },
   {
@@ -149,7 +150,20 @@ export const TOOLS: Tool[] = [
     category: "Generators",
     icon: ShieldCheck,
     keywords: ["hash", "sha256", "sha-256", "sha1", "sha512", "checksum", "digest", "sri", "integrity"],
-    related: ["base64-encoder-decoder", "password-generator", "jwt-encoder"],
+    related: ["base64-encoder-decoder", "password-generator", "jwt-encoder", "number-base-converter"],
+    phase: 3,
+  },
+  {
+    slug: "number-base-converter",
+    name: "Number Base Converter",
+    seoTitle: "Number Base Converter — Binary, Hex, Octal, Decimal",
+    tagline: "Convert integers between binary, octal, decimal and hex",
+    description:
+      "Convert integers of any size between binary, octal, decimal and hexadecimal, with 0x/0b prefixes, digit grouping and the smallest int type that fits.",
+    category: "Encoding",
+    icon: Calculator,
+    keywords: ["binary", "hex", "hexadecimal", "octal", "decimal", "radix", "base converter", "bigint"],
+    related: ["base64-encoder-decoder", "hash-generator", "timestamp-converter"],
     phase: 3,
   },
   {

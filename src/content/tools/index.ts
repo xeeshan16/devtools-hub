@@ -7,6 +7,7 @@ import { hashGeneratorContent } from "./hash-generator";
 import { jsonFormatterContent } from "./json-formatter";
 import { jwtDecoderContent } from "./jwt-decoder";
 import { jwtEncoderContent } from "./jwt-encoder";
+import { numberBaseContent } from "./number-base-converter";
 import { passwordGeneratorContent } from "./password-generator";
 import { regexTesterContent } from "./regex-tester";
 import { timestampConverterContent } from "./timestamp-converter";
@@ -32,6 +33,7 @@ export const TOOL_CONTENT: Record<string, ToolContent> = {
   "token-counter": tokenCounterContent,
   "url-encoder-decoder": urlEncoderContent,
   "hash-generator": hashGeneratorContent,
+  "number-base-converter": numberBaseContent,
 };
 
 export function getToolContent(slug: string): ToolContent {
