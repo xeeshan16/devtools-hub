@@ -5,6 +5,7 @@ import {
   Calculator,
   CaseSensitive,
   Clock,
+  CodeXml,
   FileJson,
   FileSignature,
   Fingerprint,
@@ -72,7 +73,7 @@ export const TOOLS: Tool[] = [
     category: "Encoding",
     icon: Binary,
     keywords: ["base64", "base64url", "btoa", "atob", "encode", "decode"],
-    related: ["jwt-decoder", "json-formatter", "uuid-generator", "url-encoder-decoder", "hash-generator", "number-base-converter"],
+    related: ["jwt-decoder", "json-formatter", "uuid-generator", "url-encoder-decoder", "hash-generator", "number-base-converter", "html-entity-encoder-decoder"],
     phase: 1,
   },
   {
@@ -137,7 +138,20 @@ export const TOOLS: Tool[] = [
     category: "Encoding",
     icon: Link2,
     keywords: ["url", "percent encoding", "urlencode", "urldecode", "encodeURIComponent", "query string", "escape"],
-    related: ["base64-encoder-decoder", "jwt-decoder", "json-formatter"],
+    related: ["base64-encoder-decoder", "jwt-decoder", "json-formatter", "html-entity-encoder-decoder"],
+    phase: 3,
+  },
+  {
+    slug: "html-entity-encoder-decoder",
+    name: "HTML Entity Encoder / Decoder",
+    seoTitle: "HTML Entity Encoder & Decoder — Escape HTML Online",
+    tagline: "Escape and unescape HTML entities",
+    description:
+      "Escape text for HTML or decode entities like &amp;, &eacute; and &#x1F600; back to characters, with named, decimal or hex output. Runs in your browser.",
+    category: "Encoding",
+    icon: CodeXml,
+    keywords: ["html", "entities", "escape", "unescape", "html encode", "html decode", "character reference", "&amp;", "xss"],
+    related: ["url-encoder-decoder", "base64-encoder-decoder", "json-formatter"],
     phase: 3,
   },
   {

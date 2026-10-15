@@ -4,6 +4,7 @@ import { caseConverterContent } from "./case-converter";
 import { cronParserContent } from "./cron-parser";
 import { diffCheckerContent } from "./diff-checker";
 import { hashGeneratorContent } from "./hash-generator";
+import { htmlEntitiesContent } from "./html-entity-encoder-decoder";
 import { jsonFormatterContent } from "./json-formatter";
 import { jwtDecoderContent } from "./jwt-decoder";
 import { jwtEncoderContent } from "./jwt-encoder";
@@ -34,6 +35,7 @@ export const TOOL_CONTENT: Record<string, ToolContent> = {
   "url-encoder-decoder": urlEncoderContent,
   "hash-generator": hashGeneratorContent,
   "number-base-converter": numberBaseContent,
+  "html-entity-encoder-decoder": htmlEntitiesContent,
 };
 
 export function getToolContent(slug: string): ToolContent {
