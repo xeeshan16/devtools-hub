@@ -13,6 +13,7 @@ import {
   Hash,
   KeyRound,
   Link2,
+  Palette,
   RectangleEllipsis,
   Regex,
   ShieldCheck,
@@ -151,7 +152,7 @@ export const TOOLS: Tool[] = [
     category: "Encoding",
     icon: CodeXml,
     keywords: ["html", "entities", "escape", "unescape", "html encode", "html decode", "character reference", "&amp;", "xss"],
-    related: ["url-encoder-decoder", "base64-encoder-decoder", "json-formatter"],
+    related: ["url-encoder-decoder", "base64-encoder-decoder", "json-formatter", "color-converter"],
     phase: 3,
   },
   {
@@ -177,7 +178,7 @@ export const TOOLS: Tool[] = [
     category: "Encoding",
     icon: Calculator,
     keywords: ["binary", "hex", "hexadecimal", "octal", "decimal", "radix", "base converter", "bigint"],
-    related: ["base64-encoder-decoder", "hash-generator", "timestamp-converter"],
+    related: ["base64-encoder-decoder", "hash-generator", "timestamp-converter", "color-converter"],
     phase: 3,
   },
   {
@@ -268,7 +269,20 @@ export const TOOLS: Tool[] = [
     category: "Text & Data",
     icon: CaseSensitive,
     keywords: ["case", "camelcase", "snake case", "kebab case", "pascalcase", "title case", "convert"],
-    related: ["json-formatter", "regex-tester", "yaml-json-converter"],
+    related: ["json-formatter", "regex-tester", "yaml-json-converter", "color-converter"],
+    phase: 3,
+  },
+  {
+    slug: "color-converter",
+    name: "Color Converter",
+    seoTitle: "Color Converter — HEX, RGB & HSL with Contrast Check",
+    tagline: "Convert between HEX, RGB and HSL and check contrast",
+    description:
+      "Convert colors between HEX, RGB and HSL, with alpha, and check WCAG contrast against white and black. Runs entirely in your browser.",
+    category: "Text & Data",
+    icon: Palette,
+    keywords: ["color", "colour", "hex", "rgb", "rgba", "hsl", "css color", "contrast", "wcag", "accessibility"],
+    related: ["number-base-converter", "html-entity-encoder-decoder", "case-converter"],
     phase: 3,
   },
 ];

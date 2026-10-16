@@ -1,6 +1,7 @@
 import type { ToolContent } from "@/content/types";
 import { base64Content } from "./base64-encoder-decoder";
 import { caseConverterContent } from "./case-converter";
+import { colorConverterContent } from "./color-converter";
 import { cronParserContent } from "./cron-parser";
 import { diffCheckerContent } from "./diff-checker";
 import { hashGeneratorContent } from "./hash-generator";
@@ -36,6 +37,7 @@ export const TOOL_CONTENT: Record<string, ToolContent> = {
   "hash-generator": hashGeneratorContent,
   "number-base-converter": numberBaseContent,
   "html-entity-encoder-decoder": htmlEntitiesContent,
+  "color-converter": colorConverterContent,
 };
 
 export function getToolContent(slug: string): ToolContent {
