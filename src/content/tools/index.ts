@@ -3,6 +3,7 @@ import { base64Content } from "./base64-encoder-decoder";
 import { caseConverterContent } from "./case-converter";
 import { colorConverterContent } from "./color-converter";
 import { cronParserContent } from "./cron-parser";
+import { csvJsonContent } from "./csv-json-converter";
 import { diffCheckerContent } from "./diff-checker";
 import { hashGeneratorContent } from "./hash-generator";
 import { htmlEntitiesContent } from "./html-entity-encoder-decoder";
@@ -38,6 +39,7 @@ export const TOOL_CONTENT: Record<string, ToolContent> = {
   "number-base-converter": numberBaseContent,
   "html-entity-encoder-decoder": htmlEntitiesContent,
   "color-converter": colorConverterContent,
+  "csv-json-converter": csvJsonContent,
 };
 
 export function getToolContent(slug: string): ToolContent {

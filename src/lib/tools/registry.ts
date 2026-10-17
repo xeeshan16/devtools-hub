@@ -16,6 +16,7 @@ import {
   Palette,
   RectangleEllipsis,
   Regex,
+  Sheet,
   ShieldCheck,
   type LucideIcon,
 } from "lucide-react";
@@ -61,7 +62,7 @@ export const TOOLS: Tool[] = [
     category: "Formatting",
     icon: Braces,
     keywords: ["json", "beautify", "pretty print", "minify", "validate", "lint"],
-    related: ["yaml-json-converter", "base64-encoder-decoder", "jwt-decoder"],
+    related: ["yaml-json-converter", "base64-encoder-decoder", "jwt-decoder", "csv-json-converter"],
     phase: 1,
   },
   {
@@ -217,8 +218,21 @@ export const TOOLS: Tool[] = [
     category: "Formatting",
     icon: FileJson,
     keywords: ["yaml", "yml", "json", "convert", "kubernetes", "openapi"],
-    related: ["json-formatter", "cron-parser", "base64-encoder-decoder"],
+    related: ["json-formatter", "cron-parser", "base64-encoder-decoder", "csv-json-converter"],
     phase: 2,
+  },
+  {
+    slug: "csv-json-converter",
+    name: "CSV ⇄ JSON Converter",
+    seoTitle: "CSV to JSON Converter (and Back) — Free Online",
+    tagline: "Convert between CSV and JSON",
+    description:
+      "Convert CSV to JSON or JSON to CSV, with quoted fields, custom delimiters and line-numbered errors. Runs entirely in your browser.",
+    category: "Formatting",
+    icon: Sheet,
+    keywords: ["csv", "json", "tsv", "convert", "spreadsheet", "excel", "rfc 4180", "comma separated"],
+    related: ["json-formatter", "yaml-json-converter", "diff-checker"],
+    phase: 3,
   },
   {
     slug: "diff-checker",
@@ -230,7 +244,7 @@ export const TOOLS: Tool[] = [
     category: "Text & Data",
     icon: GitCompare,
     keywords: ["diff", "compare", "text compare", "changes", "line diff", "word diff"],
-    related: ["regex-tester", "case-converter", "json-formatter"],
+    related: ["regex-tester", "case-converter", "json-formatter", "csv-json-converter"],
     phase: 3,
   },
   {
