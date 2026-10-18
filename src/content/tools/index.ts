@@ -1,6 +1,7 @@
 import type { ToolContent } from "@/content/types";
 import { base64Content } from "./base64-encoder-decoder";
 import { caseConverterContent } from "./case-converter";
+import { chmodCalculatorContent } from "./chmod-calculator";
 import { colorConverterContent } from "./color-converter";
 import { cronParserContent } from "./cron-parser";
 import { csvJsonContent } from "./csv-json-converter";
@@ -40,6 +41,7 @@ export const TOOL_CONTENT: Record<string, ToolContent> = {
   "html-entity-encoder-decoder": htmlEntitiesContent,
   "color-converter": colorConverterContent,
   "csv-json-converter": csvJsonContent,
+  "chmod-calculator": chmodCalculatorContent,
 };
 
 export function getToolContent(slug: string): ToolContent {

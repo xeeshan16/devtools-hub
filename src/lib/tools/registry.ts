@@ -7,6 +7,7 @@ import {
   Clock,
   CodeXml,
   FileJson,
+  FileLock,
   FileSignature,
   Fingerprint,
   GitCompare,
@@ -179,7 +180,7 @@ export const TOOLS: Tool[] = [
     category: "Encoding",
     icon: Calculator,
     keywords: ["binary", "hex", "hexadecimal", "octal", "decimal", "radix", "base converter", "bigint"],
-    related: ["base64-encoder-decoder", "hash-generator", "timestamp-converter", "color-converter"],
+    related: ["base64-encoder-decoder", "hash-generator", "timestamp-converter", "color-converter", "chmod-calculator"],
     phase: 3,
   },
   {
@@ -205,7 +206,7 @@ export const TOOLS: Tool[] = [
     category: "Text & Data",
     icon: CalendarClock,
     keywords: ["cron", "crontab", "schedule", "expression", "next run", "quartz"],
-    related: ["timestamp-converter", "regex-tester", "yaml-json-converter"],
+    related: ["timestamp-converter", "regex-tester", "yaml-json-converter", "chmod-calculator"],
     phase: 2,
   },
   {
@@ -297,6 +298,19 @@ export const TOOLS: Tool[] = [
     icon: Palette,
     keywords: ["color", "colour", "hex", "rgb", "rgba", "hsl", "css color", "contrast", "wcag", "accessibility"],
     related: ["number-base-converter", "html-entity-encoder-decoder", "case-converter"],
+    phase: 3,
+  },
+  {
+    slug: "chmod-calculator",
+    name: "Chmod Calculator",
+    seoTitle: "Chmod Calculator — Octal & rwx Permissions, Free",
+    tagline: "Convert Unix permissions between octal and rwx",
+    description:
+      "Convert Unix file permissions between octal (755) and symbolic (rwxr-xr-x) form, toggle bits in a grid, and copy the chmod command. Runs in your browser.",
+    category: "Text & Data",
+    icon: FileLock,
+    keywords: ["chmod", "permissions", "unix", "linux", "octal", "rwx", "file mode", "setuid", "sticky bit", "ls -l"],
+    related: ["number-base-converter", "cron-parser"],
     phase: 3,
   },
 ];
