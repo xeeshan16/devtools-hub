@@ -17,6 +17,7 @@ import { regexTesterContent } from "./regex-tester";
 import { timestampConverterContent } from "./timestamp-converter";
 import { tokenCounterContent } from "./token-counter";
 import { urlEncoderContent } from "./url-encoder-decoder";
+import { urlParserContent } from "./url-parser";
 import { uuidGeneratorContent } from "./uuid-generator";
 import { yamlJsonContent } from "./yaml-json-converter";
 
@@ -42,6 +43,7 @@ export const TOOL_CONTENT: Record<string, ToolContent> = {
   "color-converter": colorConverterContent,
   "csv-json-converter": csvJsonContent,
   "chmod-calculator": chmodCalculatorContent,
+  "url-parser": urlParserContent,
 };
 
 export function getToolContent(slug: string): ToolContent {

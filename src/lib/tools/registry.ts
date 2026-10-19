@@ -14,6 +14,7 @@ import {
   Hash,
   KeyRound,
   Link2,
+  ListTree,
   Palette,
   RectangleEllipsis,
   Regex,
@@ -141,7 +142,7 @@ export const TOOLS: Tool[] = [
     category: "Encoding",
     icon: Link2,
     keywords: ["url", "percent encoding", "urlencode", "urldecode", "encodeURIComponent", "query string", "escape"],
-    related: ["base64-encoder-decoder", "jwt-decoder", "json-formatter", "html-entity-encoder-decoder"],
+    related: ["base64-encoder-decoder", "jwt-decoder", "json-formatter", "html-entity-encoder-decoder", "url-parser"],
     phase: 3,
   },
   {
@@ -154,7 +155,7 @@ export const TOOLS: Tool[] = [
     category: "Encoding",
     icon: CodeXml,
     keywords: ["html", "entities", "escape", "unescape", "html encode", "html decode", "character reference", "&amp;", "xss"],
-    related: ["url-encoder-decoder", "base64-encoder-decoder", "json-formatter", "color-converter"],
+    related: ["url-encoder-decoder", "base64-encoder-decoder", "json-formatter", "color-converter", "url-parser"],
     phase: 3,
   },
   {
@@ -193,7 +194,7 @@ export const TOOLS: Tool[] = [
     category: "Text & Data",
     icon: Regex,
     keywords: ["regex", "regexp", "regular expression", "match", "capture", "replace"],
-    related: ["json-formatter", "timestamp-converter", "cron-parser"],
+    related: ["json-formatter", "timestamp-converter", "cron-parser", "url-parser"],
     phase: 2,
   },
   {
@@ -311,6 +312,19 @@ export const TOOLS: Tool[] = [
     icon: FileLock,
     keywords: ["chmod", "permissions", "unix", "linux", "octal", "rwx", "file mode", "setuid", "sticky bit", "ls -l"],
     related: ["number-base-converter", "cron-parser"],
+    phase: 3,
+  },
+  {
+    slug: "url-parser",
+    name: "URL Parser",
+    seoTitle: "URL Parser — Split a URL & Decode Query Params",
+    tagline: "Break a URL into parts and decode its query string",
+    description:
+      "Split any URL into scheme, host, port, path, query parameters and fragment, with decoded values and the default port filled in. Runs in your browser.",
+    category: "Encoding",
+    icon: ListTree,
+    keywords: ["url", "parse", "query string", "query parameters", "hostname", "port", "path", "fragment", "uri", "new URL"],
+    related: ["url-encoder-decoder", "html-entity-encoder-decoder", "regex-tester"],
     phase: 3,
   },
 ];
