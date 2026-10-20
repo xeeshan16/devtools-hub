@@ -15,6 +15,7 @@ import {
   KeyRound,
   Link2,
   ListTree,
+  Network,
   Palette,
   RectangleEllipsis,
   Regex,
@@ -181,7 +182,7 @@ export const TOOLS: Tool[] = [
     category: "Encoding",
     icon: Calculator,
     keywords: ["binary", "hex", "hexadecimal", "octal", "decimal", "radix", "base converter", "bigint"],
-    related: ["base64-encoder-decoder", "hash-generator", "timestamp-converter", "color-converter", "chmod-calculator"],
+    related: ["base64-encoder-decoder", "hash-generator", "timestamp-converter", "color-converter", "chmod-calculator", "subnet-calculator"],
     phase: 3,
   },
   {
@@ -311,7 +312,7 @@ export const TOOLS: Tool[] = [
     category: "Text & Data",
     icon: FileLock,
     keywords: ["chmod", "permissions", "unix", "linux", "octal", "rwx", "file mode", "setuid", "sticky bit", "ls -l"],
-    related: ["number-base-converter", "cron-parser"],
+    related: ["number-base-converter", "cron-parser", "subnet-calculator"],
     phase: 3,
   },
   {
@@ -324,7 +325,20 @@ export const TOOLS: Tool[] = [
     category: "Encoding",
     icon: ListTree,
     keywords: ["url", "parse", "query string", "query parameters", "hostname", "port", "path", "fragment", "uri", "new URL"],
-    related: ["url-encoder-decoder", "html-entity-encoder-decoder", "regex-tester"],
+    related: ["url-encoder-decoder", "html-entity-encoder-decoder", "regex-tester", "subnet-calculator"],
+    phase: 3,
+  },
+  {
+    slug: "subnet-calculator",
+    name: "Subnet Calculator",
+    seoTitle: "IPv4 Subnet Calculator — CIDR, Netmask & Host Range",
+    tagline: "Work out the network, broadcast and host range of a CIDR block",
+    description:
+      "Calculate an IPv4 subnet from CIDR or a netmask: network and broadcast address, first and last host, host count, wildcard mask and binary. Runs in your browser.",
+    category: "Text & Data",
+    icon: Network,
+    keywords: ["subnet", "cidr", "ipv4", "ip address", "netmask", "subnet mask", "wildcard mask", "broadcast", "network address", "host range", "prefix"],
+    related: ["number-base-converter", "url-parser", "chmod-calculator"],
     phase: 3,
   },
 ];

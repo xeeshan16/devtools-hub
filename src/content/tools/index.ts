@@ -14,6 +14,7 @@ import { jwtEncoderContent } from "./jwt-encoder";
 import { numberBaseContent } from "./number-base-converter";
 import { passwordGeneratorContent } from "./password-generator";
 import { regexTesterContent } from "./regex-tester";
+import { subnetCalculatorContent } from "./subnet-calculator";
 import { timestampConverterContent } from "./timestamp-converter";
 import { tokenCounterContent } from "./token-counter";
 import { urlEncoderContent } from "./url-encoder-decoder";
@@ -44,6 +45,7 @@ export const TOOL_CONTENT: Record<string, ToolContent> = {
   "csv-json-converter": csvJsonContent,
   "chmod-calculator": chmodCalculatorContent,
   "url-parser": urlParserContent,
+  "subnet-calculator": subnetCalculatorContent,
 };
 
 export function getToolContent(slug: string): ToolContent {
