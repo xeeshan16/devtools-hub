@@ -1,4 +1,5 @@
 import {
+  ArrowDownAZ,
   Binary,
   Braces,
   CalendarClock,
@@ -234,7 +235,7 @@ export const TOOLS: Tool[] = [
     category: "Formatting",
     icon: Sheet,
     keywords: ["csv", "json", "tsv", "convert", "spreadsheet", "excel", "rfc 4180", "comma separated"],
-    related: ["json-formatter", "yaml-json-converter", "diff-checker"],
+    related: ["json-formatter", "yaml-json-converter", "diff-checker", "sort-lines"],
     phase: 3,
   },
   {
@@ -247,7 +248,7 @@ export const TOOLS: Tool[] = [
     category: "Text & Data",
     icon: GitCompare,
     keywords: ["diff", "compare", "text compare", "changes", "line diff", "word diff"],
-    related: ["regex-tester", "case-converter", "json-formatter", "csv-json-converter"],
+    related: ["regex-tester", "case-converter", "json-formatter", "csv-json-converter", "sort-lines"],
     phase: 3,
   },
   {
@@ -286,7 +287,7 @@ export const TOOLS: Tool[] = [
     category: "Text & Data",
     icon: CaseSensitive,
     keywords: ["case", "camelcase", "snake case", "kebab case", "pascalcase", "title case", "convert"],
-    related: ["json-formatter", "regex-tester", "yaml-json-converter", "color-converter"],
+    related: ["json-formatter", "regex-tester", "yaml-json-converter", "color-converter", "sort-lines"],
     phase: 3,
   },
   {
@@ -339,6 +340,19 @@ export const TOOLS: Tool[] = [
     icon: Network,
     keywords: ["subnet", "cidr", "ipv4", "ip address", "netmask", "subnet mask", "wildcard mask", "broadcast", "network address", "host range", "prefix"],
     related: ["number-base-converter", "url-parser", "chmod-calculator"],
+    phase: 3,
+  },
+  {
+    slug: "sort-lines",
+    name: "Sort & Dedupe Lines",
+    seoTitle: "Sort Lines & Remove Duplicate Lines — Online, Free",
+    tagline: "Sort lines and remove duplicates, blanks and stray whitespace",
+    description:
+      "Sort lines alphabetically, naturally, by length or in reverse, and remove duplicate and blank lines, with case and whitespace options. Runs in your browser.",
+    category: "Text & Data",
+    icon: ArrowDownAZ,
+    keywords: ["sort", "sort lines", "remove duplicates", "dedupe", "unique", "uniq", "duplicate lines", "blank lines", "natural sort", "alphabetize", "list"],
+    related: ["diff-checker", "case-converter", "csv-json-converter", "regex-tester"],
     phase: 3,
   },
 ];
