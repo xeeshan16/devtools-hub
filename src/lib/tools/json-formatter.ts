@@ -13,7 +13,7 @@ const INDENT: Record<Exclude<IndentStyle, "minify">, string | number> = {
  * which is accurate but hard to act on. This maps the character offset onto a
  * line/column so the message points at somewhere the user can actually look.
  */
-function locate(input: string, message: string): string {
+export function locateJsonError(input: string, message: string): string {
   const match = /at position (\d+)/.exec(message);
   if (!match) return message;
 
@@ -35,7 +35,7 @@ export function formatJson(
   try {
     parsed = JSON.parse(input);
   } catch (e) {
-    return err(locate(input, messageOf(e, "Invalid JSON")));
+    return err(locateJsonError(input, messageOf(e, "Invalid JSON")));
   }
 
   return ok(
@@ -51,7 +51,7 @@ export function validateJson(input: string): ToolResult<true> {
     JSON.parse(input);
     return ok(true);
   } catch (e) {
-    return err(locate(input, messageOf(e, "Invalid JSON")));
+    return err(locateJsonError(input, messageOf(e, "Invalid JSON")));
   }
 }
 
