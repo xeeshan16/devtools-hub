@@ -10,6 +10,7 @@ import {
   FileJson,
   FileLock,
   FileSignature,
+  FileType,
   Fingerprint,
   GitCompare,
   Hash,
@@ -66,7 +67,7 @@ export const TOOLS: Tool[] = [
     category: "Formatting",
     icon: Braces,
     keywords: ["json", "beautify", "pretty print", "minify", "validate", "lint"],
-    related: ["yaml-json-converter", "base64-encoder-decoder", "jwt-decoder", "csv-json-converter"],
+    related: ["yaml-json-converter", "base64-encoder-decoder", "jwt-decoder", "csv-json-converter", "json-to-typescript"],
     phase: 1,
   },
   {
@@ -222,7 +223,7 @@ export const TOOLS: Tool[] = [
     category: "Formatting",
     icon: FileJson,
     keywords: ["yaml", "yml", "json", "convert", "kubernetes", "openapi"],
-    related: ["json-formatter", "cron-parser", "base64-encoder-decoder", "csv-json-converter"],
+    related: ["json-formatter", "cron-parser", "base64-encoder-decoder", "csv-json-converter", "json-to-typescript"],
     phase: 2,
   },
   {
@@ -287,7 +288,7 @@ export const TOOLS: Tool[] = [
     category: "Text & Data",
     icon: CaseSensitive,
     keywords: ["case", "camelcase", "snake case", "kebab case", "pascalcase", "title case", "convert"],
-    related: ["json-formatter", "regex-tester", "yaml-json-converter", "color-converter", "sort-lines"],
+    related: ["json-formatter", "regex-tester", "yaml-json-converter", "color-converter", "sort-lines", "json-to-typescript"],
     phase: 3,
   },
   {
@@ -353,6 +354,19 @@ export const TOOLS: Tool[] = [
     icon: ArrowDownAZ,
     keywords: ["sort", "sort lines", "remove duplicates", "dedupe", "unique", "uniq", "duplicate lines", "blank lines", "natural sort", "alphabetize", "list"],
     related: ["diff-checker", "case-converter", "csv-json-converter", "regex-tester"],
+    phase: 3,
+  },
+  {
+    slug: "json-to-typescript",
+    name: "JSON to TypeScript",
+    seoTitle: "JSON to TypeScript — Generate Interfaces Online",
+    tagline: "Generate TypeScript interfaces and types from JSON",
+    description:
+      "Paste JSON and get TypeScript interfaces or type aliases, with nested types, optional fields and unions inferred from the sample. Runs in your browser.",
+    category: "Formatting",
+    icon: FileType,
+    keywords: ["typescript", "ts", "interface", "type", "json to ts", "json to interface", "types", "api response", "codegen", "quicktype"],
+    related: ["json-formatter", "yaml-json-converter", "case-converter"],
     phase: 3,
   },
 ];

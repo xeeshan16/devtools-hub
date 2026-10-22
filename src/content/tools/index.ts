@@ -9,6 +9,7 @@ import { diffCheckerContent } from "./diff-checker";
 import { hashGeneratorContent } from "./hash-generator";
 import { htmlEntitiesContent } from "./html-entity-encoder-decoder";
 import { jsonFormatterContent } from "./json-formatter";
+import { jsonToTypescriptContent } from "./json-to-typescript";
 import { jwtDecoderContent } from "./jwt-decoder";
 import { jwtEncoderContent } from "./jwt-encoder";
 import { numberBaseContent } from "./number-base-converter";
@@ -48,6 +49,7 @@ export const TOOL_CONTENT: Record<string, ToolContent> = {
   "url-parser": urlParserContent,
   "subnet-calculator": subnetCalculatorContent,
   "sort-lines": sortLinesContent,
+  "json-to-typescript": jsonToTypescriptContent,
 };
 
 export function getToolContent(slug: string): ToolContent {
