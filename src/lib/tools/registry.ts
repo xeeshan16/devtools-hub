@@ -19,6 +19,7 @@ import {
   ListTree,
   Network,
   Palette,
+  Quote,
   RectangleEllipsis,
   Regex,
   Sheet,
@@ -67,7 +68,7 @@ export const TOOLS: Tool[] = [
     category: "Formatting",
     icon: Braces,
     keywords: ["json", "beautify", "pretty print", "minify", "validate", "lint"],
-    related: ["yaml-json-converter", "base64-encoder-decoder", "jwt-decoder", "csv-json-converter", "json-to-typescript"],
+    related: ["yaml-json-converter", "base64-encoder-decoder", "jwt-decoder", "csv-json-converter", "json-to-typescript", "json-escape-unescape"],
     phase: 1,
   },
   {
@@ -80,7 +81,7 @@ export const TOOLS: Tool[] = [
     category: "Encoding",
     icon: Binary,
     keywords: ["base64", "base64url", "btoa", "atob", "encode", "decode"],
-    related: ["jwt-decoder", "json-formatter", "uuid-generator", "url-encoder-decoder", "hash-generator", "number-base-converter", "html-entity-encoder-decoder"],
+    related: ["jwt-decoder", "json-formatter", "uuid-generator", "url-encoder-decoder", "hash-generator", "number-base-converter", "html-entity-encoder-decoder", "json-escape-unescape"],
     phase: 1,
   },
   {
@@ -145,7 +146,7 @@ export const TOOLS: Tool[] = [
     category: "Encoding",
     icon: Link2,
     keywords: ["url", "percent encoding", "urlencode", "urldecode", "encodeURIComponent", "query string", "escape"],
-    related: ["base64-encoder-decoder", "jwt-decoder", "json-formatter", "html-entity-encoder-decoder", "url-parser"],
+    related: ["base64-encoder-decoder", "jwt-decoder", "json-formatter", "html-entity-encoder-decoder", "url-parser", "json-escape-unescape"],
     phase: 3,
   },
   {
@@ -158,7 +159,7 @@ export const TOOLS: Tool[] = [
     category: "Encoding",
     icon: CodeXml,
     keywords: ["html", "entities", "escape", "unescape", "html encode", "html decode", "character reference", "&amp;", "xss"],
-    related: ["url-encoder-decoder", "base64-encoder-decoder", "json-formatter", "color-converter", "url-parser"],
+    related: ["url-encoder-decoder", "base64-encoder-decoder", "json-formatter", "color-converter", "url-parser", "json-escape-unescape"],
     phase: 3,
   },
   {
@@ -367,6 +368,19 @@ export const TOOLS: Tool[] = [
     icon: FileType,
     keywords: ["typescript", "ts", "interface", "type", "json to ts", "json to interface", "types", "api response", "codegen", "quicktype"],
     related: ["json-formatter", "yaml-json-converter", "case-converter"],
+    phase: 3,
+  },
+  {
+    slug: "json-escape-unescape",
+    name: "JSON Escape / Unescape",
+    seoTitle: "JSON Escape & Unescape — Online String Escaper",
+    tagline: "Escape text for a JSON string or unescape it back",
+    description:
+      "Escape quotes, backslashes and line breaks for a JSON string, or unescape a stringified JSON payload back to text, with error positions. Runs in your browser.",
+    category: "Encoding",
+    icon: Quote,
+    keywords: ["json escape", "json unescape", "escape string", "stringify", "backslash", "escaped json", "quotes", "escape sequences", "unicode escape", "string literal"],
+    related: ["json-formatter", "html-entity-encoder-decoder", "url-encoder-decoder", "base64-encoder-decoder"],
     phase: 3,
   },
 ];

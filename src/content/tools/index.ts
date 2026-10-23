@@ -8,6 +8,7 @@ import { csvJsonContent } from "./csv-json-converter";
 import { diffCheckerContent } from "./diff-checker";
 import { hashGeneratorContent } from "./hash-generator";
 import { htmlEntitiesContent } from "./html-entity-encoder-decoder";
+import { jsonEscapeContent } from "./json-escape-unescape";
 import { jsonFormatterContent } from "./json-formatter";
 import { jsonToTypescriptContent } from "./json-to-typescript";
 import { jwtDecoderContent } from "./jwt-decoder";
@@ -50,6 +51,7 @@ export const TOOL_CONTENT: Record<string, ToolContent> = {
   "subnet-calculator": subnetCalculatorContent,
   "sort-lines": sortLinesContent,
   "json-to-typescript": jsonToTypescriptContent,
+  "json-escape-unescape": jsonEscapeContent,
 };
 
 export function getToolContent(slug: string): ToolContent {
