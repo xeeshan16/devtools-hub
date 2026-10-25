@@ -24,6 +24,7 @@ import {
   Regex,
   Sheet,
   ShieldCheck,
+  Tags,
   type LucideIcon,
 } from "lucide-react";
 
@@ -198,7 +199,7 @@ export const TOOLS: Tool[] = [
     category: "Text & Data",
     icon: Regex,
     keywords: ["regex", "regexp", "regular expression", "match", "capture", "replace"],
-    related: ["json-formatter", "timestamp-converter", "cron-parser", "url-parser"],
+    related: ["json-formatter", "timestamp-converter", "cron-parser", "url-parser", "semver-checker"],
     phase: 2,
   },
   {
@@ -250,7 +251,7 @@ export const TOOLS: Tool[] = [
     category: "Text & Data",
     icon: GitCompare,
     keywords: ["diff", "compare", "text compare", "changes", "line diff", "word diff"],
-    related: ["regex-tester", "case-converter", "json-formatter", "csv-json-converter", "sort-lines"],
+    related: ["regex-tester", "case-converter", "json-formatter", "csv-json-converter", "sort-lines", "semver-checker"],
     phase: 3,
   },
   {
@@ -354,7 +355,7 @@ export const TOOLS: Tool[] = [
     category: "Text & Data",
     icon: ArrowDownAZ,
     keywords: ["sort", "sort lines", "remove duplicates", "dedupe", "unique", "uniq", "duplicate lines", "blank lines", "natural sort", "alphabetize", "list"],
-    related: ["diff-checker", "case-converter", "csv-json-converter", "regex-tester"],
+    related: ["diff-checker", "case-converter", "csv-json-converter", "regex-tester", "semver-checker"],
     phase: 3,
   },
   {
@@ -381,6 +382,19 @@ export const TOOLS: Tool[] = [
     icon: Quote,
     keywords: ["json escape", "json unescape", "escape string", "stringify", "backslash", "escaped json", "quotes", "escape sequences", "unicode escape", "string literal"],
     related: ["json-formatter", "html-entity-encoder-decoder", "url-encoder-decoder", "base64-encoder-decoder"],
+    phase: 3,
+  },
+  {
+    slug: "semver-checker",
+    name: "Semver Range Checker",
+    seoTitle: "Semver Range Checker — Test npm Version Ranges Online",
+    tagline: "See which versions a caret, tilde or x-range accepts",
+    description:
+      "Check which versions satisfy an npm semver range like ^1.2.3, ~2.1 or >=1 <3, see the range expanded, and sort versions by precedence. Runs in your browser.",
+    category: "Text & Data",
+    icon: Tags,
+    keywords: ["semver", "semantic versioning", "version range", "caret", "tilde", "npm", "package.json", "dependency", "satisfies", "prerelease", "sort versions", "x-range"],
+    related: ["sort-lines", "diff-checker", "regex-tester"],
     phase: 3,
   },
 ];

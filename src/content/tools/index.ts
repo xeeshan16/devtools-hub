@@ -16,6 +16,7 @@ import { jwtEncoderContent } from "./jwt-encoder";
 import { numberBaseContent } from "./number-base-converter";
 import { passwordGeneratorContent } from "./password-generator";
 import { regexTesterContent } from "./regex-tester";
+import { semverCheckerContent } from "./semver-checker";
 import { sortLinesContent } from "./sort-lines";
 import { subnetCalculatorContent } from "./subnet-calculator";
 import { timestampConverterContent } from "./timestamp-converter";
@@ -52,6 +53,7 @@ export const TOOL_CONTENT: Record<string, ToolContent> = {
   "sort-lines": sortLinesContent,
   "json-to-typescript": jsonToTypescriptContent,
   "json-escape-unescape": jsonEscapeContent,
+  "semver-checker": semverCheckerContent,
 };
 
 export function getToolContent(slug: string): ToolContent {
