@@ -22,6 +22,7 @@ import {
   Quote,
   RectangleEllipsis,
   Regex,
+  ScanSearch,
   Sheet,
   ShieldCheck,
   Tags,
@@ -147,7 +148,7 @@ export const TOOLS: Tool[] = [
     category: "Encoding",
     icon: Link2,
     keywords: ["url", "percent encoding", "urlencode", "urldecode", "encodeURIComponent", "query string", "escape"],
-    related: ["base64-encoder-decoder", "jwt-decoder", "json-formatter", "html-entity-encoder-decoder", "url-parser", "json-escape-unescape"],
+    related: ["base64-encoder-decoder", "jwt-decoder", "json-formatter", "html-entity-encoder-decoder", "url-parser", "json-escape-unescape", "unicode-inspector"],
     phase: 3,
   },
   {
@@ -160,7 +161,7 @@ export const TOOLS: Tool[] = [
     category: "Encoding",
     icon: CodeXml,
     keywords: ["html", "entities", "escape", "unescape", "html encode", "html decode", "character reference", "&amp;", "xss"],
-    related: ["url-encoder-decoder", "base64-encoder-decoder", "json-formatter", "color-converter", "url-parser", "json-escape-unescape"],
+    related: ["url-encoder-decoder", "base64-encoder-decoder", "json-formatter", "color-converter", "url-parser", "json-escape-unescape", "unicode-inspector"],
     phase: 3,
   },
   {
@@ -251,7 +252,7 @@ export const TOOLS: Tool[] = [
     category: "Text & Data",
     icon: GitCompare,
     keywords: ["diff", "compare", "text compare", "changes", "line diff", "word diff"],
-    related: ["regex-tester", "case-converter", "json-formatter", "csv-json-converter", "sort-lines", "semver-checker"],
+    related: ["regex-tester", "case-converter", "json-formatter", "csv-json-converter", "sort-lines", "semver-checker", "unicode-inspector"],
     phase: 3,
   },
   {
@@ -277,7 +278,7 @@ export const TOOLS: Tool[] = [
     category: "AI Tools",
     icon: Hash,
     keywords: ["tokens", "tokenizer", "gpt", "claude", "gemini", "tiktoken", "prompt", "context window"],
-    related: ["case-converter", "regex-tester", "diff-checker"],
+    related: ["case-converter", "regex-tester", "diff-checker", "unicode-inspector"],
     phase: 3,
   },
   {
@@ -381,7 +382,7 @@ export const TOOLS: Tool[] = [
     category: "Encoding",
     icon: Quote,
     keywords: ["json escape", "json unescape", "escape string", "stringify", "backslash", "escaped json", "quotes", "escape sequences", "unicode escape", "string literal"],
-    related: ["json-formatter", "html-entity-encoder-decoder", "url-encoder-decoder", "base64-encoder-decoder"],
+    related: ["json-formatter", "html-entity-encoder-decoder", "url-encoder-decoder", "base64-encoder-decoder", "unicode-inspector"],
     phase: 3,
   },
   {
@@ -395,6 +396,19 @@ export const TOOLS: Tool[] = [
     icon: Tags,
     keywords: ["semver", "semantic versioning", "version range", "caret", "tilde", "npm", "package.json", "dependency", "satisfies", "prerelease", "sort versions", "x-range"],
     related: ["sort-lines", "diff-checker", "regex-tester"],
+    phase: 3,
+  },
+  {
+    slug: "unicode-inspector",
+    name: "Unicode Inspector",
+    seoTitle: "Unicode Inspector — Find Invisible & Zero-Width Characters",
+    tagline: "See every code point, find zero-width and hidden characters",
+    description:
+      "Break text into Unicode code points with names, UTF-8 and UTF-16 bytes and escapes, and find zero-width spaces, no-break spaces and other hidden characters.",
+    category: "Text & Data",
+    icon: ScanSearch,
+    keywords: ["unicode", "code point", "zero width space", "invisible characters", "hidden characters", "utf-8", "utf-16", "nbsp", "bom", "emoji", "grapheme", "character inspector"],
+    related: ["json-escape-unescape", "html-entity-encoder-decoder", "url-encoder-decoder", "diff-checker", "token-counter"],
     phase: 3,
   },
 ];

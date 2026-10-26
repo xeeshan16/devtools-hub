@@ -21,6 +21,7 @@ import { sortLinesContent } from "./sort-lines";
 import { subnetCalculatorContent } from "./subnet-calculator";
 import { timestampConverterContent } from "./timestamp-converter";
 import { tokenCounterContent } from "./token-counter";
+import { unicodeInspectorContent } from "./unicode-inspector";
 import { urlEncoderContent } from "./url-encoder-decoder";
 import { urlParserContent } from "./url-parser";
 import { uuidGeneratorContent } from "./uuid-generator";
@@ -54,6 +55,7 @@ export const TOOL_CONTENT: Record<string, ToolContent> = {
   "json-to-typescript": jsonToTypescriptContent,
   "json-escape-unescape": jsonEscapeContent,
   "semver-checker": semverCheckerContent,
+  "unicode-inspector": unicodeInspectorContent,
 };
 
 export function getToolContent(slug: string): ToolContent {
