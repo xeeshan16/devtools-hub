@@ -5,6 +5,7 @@ import { chmodCalculatorContent } from "./chmod-calculator";
 import { colorConverterContent } from "./color-converter";
 import { cronParserContent } from "./cron-parser";
 import { csvJsonContent } from "./csv-json-converter";
+import { dataSizeConverterContent } from "./data-size-converter";
 import { diffCheckerContent } from "./diff-checker";
 import { hashGeneratorContent } from "./hash-generator";
 import { htmlEntitiesContent } from "./html-entity-encoder-decoder";
@@ -56,6 +57,7 @@ export const TOOL_CONTENT: Record<string, ToolContent> = {
   "json-escape-unescape": jsonEscapeContent,
   "semver-checker": semverCheckerContent,
   "unicode-inspector": unicodeInspectorContent,
+  "data-size-converter": dataSizeConverterContent,
 };
 
 export function getToolContent(slug: string): ToolContent {

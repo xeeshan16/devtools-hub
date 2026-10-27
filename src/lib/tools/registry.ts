@@ -13,6 +13,7 @@ import {
   FileType,
   Fingerprint,
   GitCompare,
+  HardDrive,
   Hash,
   KeyRound,
   Link2,
@@ -187,7 +188,7 @@ export const TOOLS: Tool[] = [
     category: "Encoding",
     icon: Calculator,
     keywords: ["binary", "hex", "hexadecimal", "octal", "decimal", "radix", "base converter", "bigint"],
-    related: ["base64-encoder-decoder", "hash-generator", "timestamp-converter", "color-converter", "chmod-calculator", "subnet-calculator"],
+    related: ["base64-encoder-decoder", "hash-generator", "timestamp-converter", "color-converter", "chmod-calculator", "subnet-calculator", "data-size-converter"],
     phase: 3,
   },
   {
@@ -343,7 +344,7 @@ export const TOOLS: Tool[] = [
     category: "Text & Data",
     icon: Network,
     keywords: ["subnet", "cidr", "ipv4", "ip address", "netmask", "subnet mask", "wildcard mask", "broadcast", "network address", "host range", "prefix"],
-    related: ["number-base-converter", "url-parser", "chmod-calculator"],
+    related: ["number-base-converter", "url-parser", "chmod-calculator", "data-size-converter"],
     phase: 3,
   },
   {
@@ -409,6 +410,19 @@ export const TOOLS: Tool[] = [
     icon: ScanSearch,
     keywords: ["unicode", "code point", "zero width space", "invisible characters", "hidden characters", "utf-8", "utf-16", "nbsp", "bom", "emoji", "grapheme", "character inspector"],
     related: ["json-escape-unescape", "html-entity-encoder-decoder", "url-encoder-decoder", "diff-checker", "token-counter"],
+    phase: 3,
+  },
+  {
+    slug: "data-size-converter",
+    name: "Data Size Converter",
+    seoTitle: "Data Size Converter — Bytes, KB, MB, GB, KiB, MiB, GiB",
+    tagline: "Convert between bytes, MB, GiB and bits, decimal and binary",
+    description:
+      "Convert data sizes between bytes, kB, MB, GB, TB, binary KiB, MiB, GiB and bits. Exact results, with MB vs MiB and MB vs Mb kept apart. Runs in your browser.",
+    category: "Text & Data",
+    icon: HardDrive,
+    keywords: ["bytes", "kb", "mb", "gb", "tb", "kib", "mib", "gib", "megabits", "bits to bytes", "byte converter", "file size", "storage", "bandwidth", "iec", "binary prefix"],
+    related: ["number-base-converter", "subnet-calculator", "timestamp-converter", "chmod-calculator"],
     phase: 3,
   },
 ];
