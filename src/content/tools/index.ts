@@ -9,6 +9,7 @@ import { dataSizeConverterContent } from "./data-size-converter";
 import { diffCheckerContent } from "./diff-checker";
 import { hashGeneratorContent } from "./hash-generator";
 import { htmlEntitiesContent } from "./html-entity-encoder-decoder";
+import { httpStatusCodesContent } from "./http-status-codes";
 import { jsonEscapeContent } from "./json-escape-unescape";
 import { jsonFormatterContent } from "./json-formatter";
 import { jsonToTypescriptContent } from "./json-to-typescript";
@@ -58,6 +59,7 @@ export const TOOL_CONTENT: Record<string, ToolContent> = {
   "semver-checker": semverCheckerContent,
   "unicode-inspector": unicodeInspectorContent,
   "data-size-converter": dataSizeConverterContent,
+  "http-status-codes": httpStatusCodesContent,
 };
 
 export function getToolContent(slug: string): ToolContent {

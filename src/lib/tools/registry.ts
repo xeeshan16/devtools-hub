@@ -12,6 +12,7 @@ import {
   FileSignature,
   FileType,
   Fingerprint,
+  Globe,
   GitCompare,
   HardDrive,
   Hash,
@@ -110,7 +111,7 @@ export const TOOLS: Tool[] = [
     category: "Text & Data",
     icon: Clock,
     keywords: ["unix", "epoch", "timestamp", "date", "iso 8601", "utc", "time"],
-    related: ["cron-parser", "uuid-generator", "jwt-decoder", "number-base-converter"],
+    related: ["cron-parser", "uuid-generator", "jwt-decoder", "number-base-converter", "http-status-codes"],
     phase: 1,
   },
   {
@@ -123,7 +124,7 @@ export const TOOLS: Tool[] = [
     category: "Encoding",
     icon: KeyRound,
     keywords: ["jwt", "json web token", "bearer", "claims", "exp", "auth"],
-    related: ["base64-encoder-decoder", "json-formatter", "jwt-encoder"],
+    related: ["base64-encoder-decoder", "json-formatter", "jwt-encoder", "http-status-codes"],
     phase: 2,
   },
   {
@@ -201,7 +202,7 @@ export const TOOLS: Tool[] = [
     category: "Text & Data",
     icon: Regex,
     keywords: ["regex", "regexp", "regular expression", "match", "capture", "replace"],
-    related: ["json-formatter", "timestamp-converter", "cron-parser", "url-parser", "semver-checker"],
+    related: ["json-formatter", "timestamp-converter", "cron-parser", "url-parser", "semver-checker", "http-status-codes"],
     phase: 2,
   },
   {
@@ -331,7 +332,7 @@ export const TOOLS: Tool[] = [
     category: "Encoding",
     icon: ListTree,
     keywords: ["url", "parse", "query string", "query parameters", "hostname", "port", "path", "fragment", "uri", "new URL"],
-    related: ["url-encoder-decoder", "html-entity-encoder-decoder", "regex-tester", "subnet-calculator"],
+    related: ["url-encoder-decoder", "html-entity-encoder-decoder", "regex-tester", "subnet-calculator", "http-status-codes"],
     phase: 3,
   },
   {
@@ -423,6 +424,19 @@ export const TOOLS: Tool[] = [
     icon: HardDrive,
     keywords: ["bytes", "kb", "mb", "gb", "tb", "kib", "mib", "gib", "megabits", "bits to bytes", "byte converter", "file size", "storage", "bandwidth", "iec", "binary prefix"],
     related: ["number-base-converter", "subnet-calculator", "timestamp-converter", "chmod-calculator"],
+    phase: 3,
+  },
+  {
+    slug: "http-status-codes",
+    name: "HTTP Status Codes",
+    seoTitle: "HTTP Status Codes — Lookup & Meaning of Every Code",
+    tagline: "Look up what any HTTP status code means and when to use it",
+    description:
+      "Search every registered HTTP status code by number, class or name. Plain-English meanings, RFC 9110 names, old aliases and the spec for each code.",
+    category: "Text & Data",
+    icon: Globe,
+    keywords: ["http", "status code", "response code", "404", "500", "403", "401", "429", "rfc 9110", "error code", "redirect", "rest api"],
+    related: ["url-parser", "jwt-decoder", "timestamp-converter", "regex-tester"],
     phase: 3,
   },
 ];
