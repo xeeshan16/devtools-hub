@@ -28,6 +28,7 @@ import {
   Sheet,
   ShieldCheck,
   Tags,
+  Terminal,
   type LucideIcon,
 } from "lucide-react";
 
@@ -72,7 +73,7 @@ export const TOOLS: Tool[] = [
     category: "Formatting",
     icon: Braces,
     keywords: ["json", "beautify", "pretty print", "minify", "validate", "lint"],
-    related: ["yaml-json-converter", "base64-encoder-decoder", "jwt-decoder", "csv-json-converter", "json-to-typescript", "json-escape-unescape"],
+    related: ["yaml-json-converter", "base64-encoder-decoder", "jwt-decoder", "csv-json-converter", "json-to-typescript", "json-escape-unescape", "curl-to-fetch"],
     phase: 1,
   },
   {
@@ -332,7 +333,7 @@ export const TOOLS: Tool[] = [
     category: "Encoding",
     icon: ListTree,
     keywords: ["url", "parse", "query string", "query parameters", "hostname", "port", "path", "fragment", "uri", "new URL"],
-    related: ["url-encoder-decoder", "html-entity-encoder-decoder", "regex-tester", "subnet-calculator", "http-status-codes"],
+    related: ["url-encoder-decoder", "html-entity-encoder-decoder", "regex-tester", "subnet-calculator", "http-status-codes", "curl-to-fetch"],
     phase: 3,
   },
   {
@@ -371,7 +372,7 @@ export const TOOLS: Tool[] = [
     category: "Formatting",
     icon: FileType,
     keywords: ["typescript", "ts", "interface", "type", "json to ts", "json to interface", "types", "api response", "codegen", "quicktype"],
-    related: ["json-formatter", "yaml-json-converter", "case-converter"],
+    related: ["json-formatter", "yaml-json-converter", "case-converter", "curl-to-fetch"],
     phase: 3,
   },
   {
@@ -436,7 +437,20 @@ export const TOOLS: Tool[] = [
     category: "Text & Data",
     icon: Globe,
     keywords: ["http", "status code", "response code", "404", "500", "403", "401", "429", "rfc 9110", "error code", "redirect", "rest api"],
-    related: ["url-parser", "jwt-decoder", "timestamp-converter", "regex-tester"],
+    related: ["url-parser", "jwt-decoder", "timestamp-converter", "regex-tester", "curl-to-fetch"],
+    phase: 3,
+  },
+  {
+    slug: "curl-to-fetch",
+    name: "cURL to Fetch Converter",
+    seoTitle: "cURL to Fetch Converter — curl to JavaScript Online",
+    tagline: "Turn a curl command into a JavaScript fetch call",
+    description:
+      "Convert curl commands to JavaScript fetch code: method, headers, JSON and form bodies, basic auth and timeouts, with notes on what fetch can't do. Runs in your browser.",
+    category: "Formatting",
+    icon: Terminal,
+    keywords: ["curl", "fetch", "convert curl", "curl to javascript", "curl to js", "copy as curl", "http request", "api", "node fetch", "rest"],
+    related: ["json-to-typescript", "url-parser", "http-status-codes", "json-formatter"],
     phase: 3,
   },
 ];

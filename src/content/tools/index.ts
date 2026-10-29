@@ -5,6 +5,7 @@ import { chmodCalculatorContent } from "./chmod-calculator";
 import { colorConverterContent } from "./color-converter";
 import { cronParserContent } from "./cron-parser";
 import { csvJsonContent } from "./csv-json-converter";
+import { curlToFetchContent } from "./curl-to-fetch";
 import { dataSizeConverterContent } from "./data-size-converter";
 import { diffCheckerContent } from "./diff-checker";
 import { hashGeneratorContent } from "./hash-generator";
@@ -60,6 +61,7 @@ export const TOOL_CONTENT: Record<string, ToolContent> = {
   "unicode-inspector": unicodeInspectorContent,
   "data-size-converter": dataSizeConverterContent,
   "http-status-codes": httpStatusCodesContent,
+  "curl-to-fetch": curlToFetchContent,
 };
 
 export function getToolContent(slug: string): ToolContent {
