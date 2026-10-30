@@ -15,6 +15,7 @@ import {
   Globe,
   GitCompare,
   HardDrive,
+  Hourglass,
   Hash,
   KeyRound,
   Link2,
@@ -112,7 +113,7 @@ export const TOOLS: Tool[] = [
     category: "Text & Data",
     icon: Clock,
     keywords: ["unix", "epoch", "timestamp", "date", "iso 8601", "utc", "time"],
-    related: ["cron-parser", "uuid-generator", "jwt-decoder", "number-base-converter", "http-status-codes"],
+    related: ["cron-parser", "uuid-generator", "jwt-decoder", "number-base-converter", "http-status-codes", "iso-duration-converter"],
     phase: 1,
   },
   {
@@ -216,7 +217,7 @@ export const TOOLS: Tool[] = [
     category: "Text & Data",
     icon: CalendarClock,
     keywords: ["cron", "crontab", "schedule", "expression", "next run", "quartz"],
-    related: ["timestamp-converter", "regex-tester", "yaml-json-converter", "chmod-calculator"],
+    related: ["timestamp-converter", "regex-tester", "yaml-json-converter", "chmod-calculator", "iso-duration-converter"],
     phase: 2,
   },
   {
@@ -424,7 +425,7 @@ export const TOOLS: Tool[] = [
     category: "Text & Data",
     icon: HardDrive,
     keywords: ["bytes", "kb", "mb", "gb", "tb", "kib", "mib", "gib", "megabits", "bits to bytes", "byte converter", "file size", "storage", "bandwidth", "iec", "binary prefix"],
-    related: ["number-base-converter", "subnet-calculator", "timestamp-converter", "chmod-calculator"],
+    related: ["number-base-converter", "subnet-calculator", "timestamp-converter", "chmod-calculator", "iso-duration-converter"],
     phase: 3,
   },
   {
@@ -451,6 +452,19 @@ export const TOOLS: Tool[] = [
     icon: Terminal,
     keywords: ["curl", "fetch", "convert curl", "curl to javascript", "curl to js", "copy as curl", "http request", "api", "node fetch", "rest"],
     related: ["json-to-typescript", "url-parser", "http-status-codes", "json-formatter"],
+    phase: 3,
+  },
+  {
+    slug: "iso-duration-converter",
+    name: "ISO 8601 Duration Converter",
+    seoTitle: "ISO 8601 Duration Converter — PT1H30M to Seconds",
+    tagline: "Parse ISO 8601 durations like P1DT2H into seconds and back",
+    description:
+      "Parse ISO 8601 durations such as PT1H30M or P1DT2H into components, plain English and exact totals in seconds, minutes and hours, or turn seconds into ISO.",
+    category: "Text & Data",
+    icon: Hourglass,
+    keywords: ["iso 8601", "duration", "pt1h", "period", "xsd duration", "java duration", "youtube duration", "seconds to iso", "time span", "timespan"],
+    related: ["timestamp-converter", "cron-parser", "data-size-converter"],
     phase: 3,
   },
 ];
