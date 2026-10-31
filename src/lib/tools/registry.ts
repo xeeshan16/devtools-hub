@@ -28,6 +28,7 @@ import {
   ScanSearch,
   Sheet,
   ShieldCheck,
+  Table2,
   Tags,
   Terminal,
   type LucideIcon,
@@ -243,7 +244,7 @@ export const TOOLS: Tool[] = [
     category: "Formatting",
     icon: Sheet,
     keywords: ["csv", "json", "tsv", "convert", "spreadsheet", "excel", "rfc 4180", "comma separated"],
-    related: ["json-formatter", "yaml-json-converter", "diff-checker", "sort-lines"],
+    related: ["json-formatter", "yaml-json-converter", "diff-checker", "sort-lines", "markdown-table-generator"],
     phase: 3,
   },
   {
@@ -360,7 +361,7 @@ export const TOOLS: Tool[] = [
     category: "Text & Data",
     icon: ArrowDownAZ,
     keywords: ["sort", "sort lines", "remove duplicates", "dedupe", "unique", "uniq", "duplicate lines", "blank lines", "natural sort", "alphabetize", "list"],
-    related: ["diff-checker", "case-converter", "csv-json-converter", "regex-tester", "semver-checker"],
+    related: ["diff-checker", "case-converter", "csv-json-converter", "regex-tester", "semver-checker", "markdown-table-generator"],
     phase: 3,
   },
   {
@@ -465,6 +466,19 @@ export const TOOLS: Tool[] = [
     icon: Hourglass,
     keywords: ["iso 8601", "duration", "pt1h", "period", "xsd duration", "java duration", "youtube duration", "seconds to iso", "time span", "timespan"],
     related: ["timestamp-converter", "cron-parser", "data-size-converter"],
+    phase: 3,
+  },
+  {
+    slug: "markdown-table-generator",
+    name: "Markdown Table Generator",
+    seoTitle: "CSV to Markdown Table Generator — Free Online",
+    tagline: "Turn CSV or spreadsheet cells into a Markdown table",
+    description:
+      "Convert CSV, TSV or cells pasted from a spreadsheet into a GitHub-flavoured Markdown table, with column alignment and escaped pipes. Runs in your browser.",
+    category: "Formatting",
+    icon: Table2,
+    keywords: ["markdown", "table", "markdown table", "gfm", "github", "csv to markdown", "tsv", "excel to markdown", "spreadsheet", "readme"],
+    related: ["csv-json-converter", "json-formatter", "sort-lines"],
     phase: 3,
   },
 ];
