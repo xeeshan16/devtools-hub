@@ -9,6 +9,7 @@ import { curlToFetchContent } from "./curl-to-fetch";
 import { dataSizeConverterContent } from "./data-size-converter";
 import { diffCheckerContent } from "./diff-checker";
 import { hashGeneratorContent } from "./hash-generator";
+import { hmacGeneratorContent } from "./hmac-generator";
 import { htmlEntitiesContent } from "./html-entity-encoder-decoder";
 import { httpStatusCodesContent } from "./http-status-codes";
 import { isoDurationConverterContent } from "./iso-duration-converter";
@@ -49,6 +50,7 @@ export const TOOL_CONTENT: Record<string, ToolContent> = {
   "token-counter": tokenCounterContent,
   "url-encoder-decoder": urlEncoderContent,
   "hash-generator": hashGeneratorContent,
+  "hmac-generator": hmacGeneratorContent,
   "number-base-converter": numberBaseContent,
   "html-entity-encoder-decoder": htmlEntitiesContent,
   "color-converter": colorConverterContent,

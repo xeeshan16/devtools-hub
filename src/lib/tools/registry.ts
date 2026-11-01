@@ -18,6 +18,7 @@ import {
   Hourglass,
   Hash,
   KeyRound,
+  KeySquare,
   Link2,
   ListTree,
   Network,
@@ -140,7 +141,7 @@ export const TOOLS: Tool[] = [
     category: "Encoding",
     icon: FileSignature,
     keywords: ["jwt", "encode", "sign", "json web token", "hs256", "hmac", "generate token"],
-    related: ["jwt-decoder", "base64-encoder-decoder", "json-formatter", "hash-generator"],
+    related: ["jwt-decoder", "base64-encoder-decoder", "json-formatter", "hash-generator", "hmac-generator"],
     phase: 3,
   },
   {
@@ -179,7 +180,20 @@ export const TOOLS: Tool[] = [
     category: "Generators",
     icon: ShieldCheck,
     keywords: ["hash", "sha256", "sha-256", "sha1", "sha512", "checksum", "digest", "sri", "integrity"],
-    related: ["base64-encoder-decoder", "password-generator", "jwt-encoder", "number-base-converter"],
+    related: ["base64-encoder-decoder", "password-generator", "jwt-encoder", "number-base-converter", "hmac-generator"],
+    phase: 3,
+  },
+  {
+    slug: "hmac-generator",
+    name: "HMAC Generator",
+    seoTitle: "HMAC Generator — HMAC-SHA256 Online & Webhook Verify",
+    tagline: "Compute and verify HMAC-SHA256, SHA-384, SHA-512 and SHA-1 signatures",
+    description:
+      "Compute HMAC-SHA256, SHA-384, SHA-512 or SHA-1 signatures with a text, hex or Base64 key, and verify webhook signatures. Runs entirely in your browser.",
+    category: "Generators",
+    icon: KeySquare,
+    keywords: ["hmac", "hmac-sha256", "hmac sha256", "signature", "webhook", "verify webhook", "x-hub-signature-256", "message authentication", "mac", "api signing"],
+    related: ["hash-generator", "jwt-encoder", "base64-encoder-decoder", "number-base-converter"],
     phase: 3,
   },
   {
