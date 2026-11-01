@@ -23,13 +23,22 @@ export type Digests = Record<HashAlgorithm, string>;
 /** A high surrogate not followed by a low one, or a low one not preceded by a high one. */
 const LONE_SURROGATE = /[\uD800-\uDBFF](?![\uDC00-\uDFFF])|(?<![\uD800-\uDBFF])[\uDC00-\uDFFF]/;
 
-function toHex(bytes: Uint8Array): string {
+/**
+ * Returns the 0-based index of the first unpaired surrogate, or -1. TextEncoder
+ * would silently replace one with U+FFFD, so callers that hash or sign text
+ * reject it instead of processing different bytes than the user typed.
+ */
+export function loneSurrogateIndex(input: string): number {
+  return LONE_SURROGATE.exec(input)?.index ?? -1;
+}
+
+export function toHex(bytes: Uint8Array): string {
   let hex = "";
   for (const byte of bytes) hex += byte.toString(16).padStart(2, "0");
   return hex;
 }
 
-function toBase64(bytes: Uint8Array): string {
+export function toBase64(bytes: Uint8Array): string {
   let binary = "";
   for (const byte of bytes) binary += String.fromCharCode(byte);
   return btoa(binary);
@@ -44,12 +53,10 @@ function toBase64(bytes: Uint8Array): string {
 export async function hashText(input: string, options: HashOptions = {}): Promise<ToolResult<Digests>> {
   const { encoding = "hex", uppercase = false } = options;
 
-  // TextEncoder would silently replace a lone surrogate with U+FFFD, producing
-  // a digest of different bytes than the user thinks they typed.
-  const surrogate = LONE_SURROGATE.exec(input);
-  if (surrogate) {
+  const surrogate = loneSurrogateIndex(input);
+  if (surrogate !== -1) {
     return err(
-      `Input contains an unpaired surrogate character at position ${surrogate.index + 1}, which cannot be represented as UTF-8.`,
+      `Input contains an unpaired surrogate character at position ${surrogate + 1}, which cannot be represented as UTF-8.`,
     );
   }
 
