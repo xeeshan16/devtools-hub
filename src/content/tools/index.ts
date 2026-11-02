@@ -8,6 +8,7 @@ import { csvJsonContent } from "./csv-json-converter";
 import { curlToFetchContent } from "./curl-to-fetch";
 import { dataSizeConverterContent } from "./data-size-converter";
 import { diffCheckerContent } from "./diff-checker";
+import { envJsonContent } from "./env-json-converter";
 import { hashGeneratorContent } from "./hash-generator";
 import { hmacGeneratorContent } from "./hmac-generator";
 import { htmlEntitiesContent } from "./html-entity-encoder-decoder";
@@ -68,6 +69,7 @@ export const TOOL_CONTENT: Record<string, ToolContent> = {
   "curl-to-fetch": curlToFetchContent,
   "iso-duration-converter": isoDurationConverterContent,
   "markdown-table-generator": markdownTableContent,
+  "env-json-converter": envJsonContent,
 };
 
 export function getToolContent(slug: string): ToolContent {

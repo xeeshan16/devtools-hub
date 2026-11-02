@@ -7,6 +7,7 @@ import {
   CaseSensitive,
   Clock,
   CodeXml,
+  FileCog,
   FileJson,
   FileLock,
   FileSignature,
@@ -245,7 +246,7 @@ export const TOOLS: Tool[] = [
     category: "Formatting",
     icon: FileJson,
     keywords: ["yaml", "yml", "json", "convert", "kubernetes", "openapi"],
-    related: ["json-formatter", "cron-parser", "base64-encoder-decoder", "csv-json-converter", "json-to-typescript"],
+    related: ["json-formatter", "cron-parser", "base64-encoder-decoder", "csv-json-converter", "json-to-typescript", "env-json-converter"],
     phase: 2,
   },
   {
@@ -401,7 +402,7 @@ export const TOOLS: Tool[] = [
     category: "Encoding",
     icon: Quote,
     keywords: ["json escape", "json unescape", "escape string", "stringify", "backslash", "escaped json", "quotes", "escape sequences", "unicode escape", "string literal"],
-    related: ["json-formatter", "html-entity-encoder-decoder", "url-encoder-decoder", "base64-encoder-decoder", "unicode-inspector"],
+    related: ["json-formatter", "html-entity-encoder-decoder", "url-encoder-decoder", "base64-encoder-decoder", "unicode-inspector", "env-json-converter"],
     phase: 3,
   },
   {
@@ -493,6 +494,19 @@ export const TOOLS: Tool[] = [
     icon: Table2,
     keywords: ["markdown", "table", "markdown table", "gfm", "github", "csv to markdown", "tsv", "excel to markdown", "spreadsheet", "readme"],
     related: ["csv-json-converter", "json-formatter", "sort-lines"],
+    phase: 3,
+  },
+  {
+    slug: "env-json-converter",
+    name: ".env ⇄ JSON Converter",
+    seoTitle: ".env to JSON Converter (and Back) — Free Online",
+    tagline: "Convert dotenv files to JSON and back",
+    description:
+      "Convert a .env file to JSON or JSON to .env, with quotes, escapes, multi-line values and duplicate keys handled. Runs in your browser, so secrets stay local.",
+    category: "Formatting",
+    icon: FileCog,
+    keywords: ["env", ".env", "dotenv", "environment variables", "env to json", "json to env", "docker compose", "config", "secrets"],
+    related: ["yaml-json-converter", "json-formatter", "json-escape-unescape", "base64-encoder-decoder"],
     phase: 3,
   },
 ];
