@@ -24,6 +24,7 @@ import { numberBaseContent } from "./number-base-converter";
 import { passwordGeneratorContent } from "./password-generator";
 import { regexTesterContent } from "./regex-tester";
 import { semverCheckerContent } from "./semver-checker";
+import { slugGeneratorContent } from "./slug-generator";
 import { sortLinesContent } from "./sort-lines";
 import { subnetCalculatorContent } from "./subnet-calculator";
 import { timestampConverterContent } from "./timestamp-converter";
@@ -45,6 +46,7 @@ export const TOOL_CONTENT: Record<string, ToolContent> = {
   "cron-parser": cronParserContent,
   "yaml-json-converter": yamlJsonContent,
   "case-converter": caseConverterContent,
+  "slug-generator": slugGeneratorContent,
   "password-generator": passwordGeneratorContent,
   "diff-checker": diffCheckerContent,
   "jwt-encoder": jwtEncoderContent,

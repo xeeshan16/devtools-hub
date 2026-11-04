@@ -30,6 +30,7 @@ import {
   ScanSearch,
   Sheet,
   ShieldCheck,
+  Slash,
   Table2,
   Tags,
   Terminal,
@@ -155,7 +156,7 @@ export const TOOLS: Tool[] = [
     category: "Encoding",
     icon: Link2,
     keywords: ["url", "percent encoding", "urlencode", "urldecode", "encodeURIComponent", "query string", "escape"],
-    related: ["base64-encoder-decoder", "jwt-decoder", "json-formatter", "html-entity-encoder-decoder", "url-parser", "json-escape-unescape", "unicode-inspector"],
+    related: ["base64-encoder-decoder", "jwt-decoder", "json-formatter", "html-entity-encoder-decoder", "url-parser", "json-escape-unescape", "unicode-inspector", "slug-generator"],
     phase: 3,
   },
   {
@@ -311,7 +312,20 @@ export const TOOLS: Tool[] = [
     category: "Text & Data",
     icon: CaseSensitive,
     keywords: ["case", "camelcase", "snake case", "kebab case", "pascalcase", "title case", "convert"],
-    related: ["json-formatter", "regex-tester", "yaml-json-converter", "color-converter", "sort-lines", "json-to-typescript"],
+    related: ["json-formatter", "regex-tester", "yaml-json-converter", "color-converter", "sort-lines", "json-to-typescript", "slug-generator"],
+    phase: 3,
+  },
+  {
+    slug: "slug-generator",
+    name: "Slug Generator",
+    seoTitle: "URL Slug Generator — Online, Free",
+    tagline: "Turn titles into clean, URL-safe slugs",
+    description:
+      "Turn titles into clean URL slugs: strips accents, transliterates letters like ß, collapses punctuation, and trims to a length at a word boundary. Runs in your browser.",
+    category: "Text & Data",
+    icon: Slash,
+    keywords: ["slug", "slugify", "url slug", "permalink", "seo url", "friendly url", "kebab case", "remove accents", "transliterate"],
+    related: ["case-converter", "url-encoder-decoder", "unicode-inspector", "sort-lines"],
     phase: 3,
   },
   {
@@ -376,7 +390,7 @@ export const TOOLS: Tool[] = [
     category: "Text & Data",
     icon: ArrowDownAZ,
     keywords: ["sort", "sort lines", "remove duplicates", "dedupe", "unique", "uniq", "duplicate lines", "blank lines", "natural sort", "alphabetize", "list"],
-    related: ["diff-checker", "case-converter", "csv-json-converter", "regex-tester", "semver-checker", "markdown-table-generator"],
+    related: ["diff-checker", "case-converter", "csv-json-converter", "regex-tester", "semver-checker", "markdown-table-generator", "slug-generator"],
     phase: 3,
   },
   {
@@ -428,7 +442,7 @@ export const TOOLS: Tool[] = [
     category: "Text & Data",
     icon: ScanSearch,
     keywords: ["unicode", "code point", "zero width space", "invisible characters", "hidden characters", "utf-8", "utf-16", "nbsp", "bom", "emoji", "grapheme", "character inspector"],
-    related: ["json-escape-unescape", "html-entity-encoder-decoder", "url-encoder-decoder", "diff-checker", "token-counter"],
+    related: ["json-escape-unescape", "html-entity-encoder-decoder", "url-encoder-decoder", "diff-checker", "token-counter", "slug-generator"],
     phase: 3,
   },
   {
