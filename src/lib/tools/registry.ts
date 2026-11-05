@@ -2,6 +2,7 @@ import {
   ArrowDownAZ,
   Binary,
   Braces,
+  Brackets,
   CalendarClock,
   Calculator,
   CaseSensitive,
@@ -156,7 +157,7 @@ export const TOOLS: Tool[] = [
     category: "Encoding",
     icon: Link2,
     keywords: ["url", "percent encoding", "urlencode", "urldecode", "encodeURIComponent", "query string", "escape"],
-    related: ["base64-encoder-decoder", "jwt-decoder", "json-formatter", "html-entity-encoder-decoder", "url-parser", "json-escape-unescape", "unicode-inspector", "slug-generator"],
+    related: ["base64-encoder-decoder", "jwt-decoder", "json-formatter", "html-entity-encoder-decoder", "url-parser", "json-escape-unescape", "unicode-inspector", "slug-generator", "query-string-json-converter"],
     phase: 3,
   },
   {
@@ -364,7 +365,7 @@ export const TOOLS: Tool[] = [
     category: "Encoding",
     icon: ListTree,
     keywords: ["url", "parse", "query string", "query parameters", "hostname", "port", "path", "fragment", "uri", "new URL"],
-    related: ["url-encoder-decoder", "html-entity-encoder-decoder", "regex-tester", "subnet-calculator", "http-status-codes", "curl-to-fetch"],
+    related: ["url-encoder-decoder", "html-entity-encoder-decoder", "regex-tester", "subnet-calculator", "http-status-codes", "curl-to-fetch", "query-string-json-converter"],
     phase: 3,
   },
   {
@@ -521,6 +522,19 @@ export const TOOLS: Tool[] = [
     icon: FileCog,
     keywords: ["env", ".env", "dotenv", "environment variables", "env to json", "json to env", "docker compose", "config", "secrets"],
     related: ["yaml-json-converter", "json-formatter", "json-escape-unescape", "base64-encoder-decoder"],
+    phase: 3,
+  },
+  {
+    slug: "query-string-json-converter",
+    name: "Query String ⇄ JSON Converter",
+    seoTitle: "Query String to JSON Converter (and Back) — Free",
+    tagline: "Convert URL query strings to JSON and back",
+    description:
+      "Convert a URL query string to JSON or JSON to a query string, with repeated keys, nested user[name] brackets and arrays handled. Runs in your browser.",
+    category: "Encoding",
+    icon: Brackets,
+    keywords: ["query string", "querystring", "query params", "url params", "search params", "urlsearchparams", "qs", "query to json", "json to query string", "form data", "x-www-form-urlencoded"],
+    related: ["url-parser", "url-encoder-decoder", "json-formatter", "curl-to-fetch"],
     phase: 3,
   },
 ];

@@ -22,6 +22,7 @@ import { jwtEncoderContent } from "./jwt-encoder";
 import { markdownTableContent } from "./markdown-table-generator";
 import { numberBaseContent } from "./number-base-converter";
 import { passwordGeneratorContent } from "./password-generator";
+import { queryStringJsonContent } from "./query-string-json-converter";
 import { regexTesterContent } from "./regex-tester";
 import { semverCheckerContent } from "./semver-checker";
 import { slugGeneratorContent } from "./slug-generator";
@@ -72,6 +73,7 @@ export const TOOL_CONTENT: Record<string, ToolContent> = {
   "iso-duration-converter": isoDurationConverterContent,
   "markdown-table-generator": markdownTableContent,
   "env-json-converter": envJsonContent,
+  "query-string-json-converter": queryStringJsonContent,
 };
 
 export function getToolContent(slug: string): ToolContent {
