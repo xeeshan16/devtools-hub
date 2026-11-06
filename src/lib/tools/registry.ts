@@ -21,6 +21,7 @@ import {
   Hash,
   KeyRound,
   KeySquare,
+  LetterText,
   Link2,
   ListTree,
   Network,
@@ -326,7 +327,7 @@ export const TOOLS: Tool[] = [
     category: "Text & Data",
     icon: Slash,
     keywords: ["slug", "slugify", "url slug", "permalink", "seo url", "friendly url", "kebab case", "remove accents", "transliterate"],
-    related: ["case-converter", "url-encoder-decoder", "unicode-inspector", "sort-lines"],
+    related: ["case-converter", "url-encoder-decoder", "unicode-inspector", "sort-lines", "lorem-ipsum-generator"],
     phase: 3,
   },
   {
@@ -508,7 +509,7 @@ export const TOOLS: Tool[] = [
     category: "Formatting",
     icon: Table2,
     keywords: ["markdown", "table", "markdown table", "gfm", "github", "csv to markdown", "tsv", "excel to markdown", "spreadsheet", "readme"],
-    related: ["csv-json-converter", "json-formatter", "sort-lines"],
+    related: ["csv-json-converter", "json-formatter", "sort-lines", "lorem-ipsum-generator"],
     phase: 3,
   },
   {
@@ -535,6 +536,19 @@ export const TOOLS: Tool[] = [
     icon: Brackets,
     keywords: ["query string", "querystring", "query params", "url params", "search params", "urlsearchparams", "qs", "query to json", "json to query string", "form data", "x-www-form-urlencoded"],
     related: ["url-parser", "url-encoder-decoder", "json-formatter", "curl-to-fetch"],
+    phase: 3,
+  },
+  {
+    slug: "lorem-ipsum-generator",
+    name: "Lorem Ipsum Generator",
+    seoTitle: "Lorem Ipsum Generator — Placeholder Text, Free",
+    tagline: "Generate lorem ipsum paragraphs, sentences or words",
+    description:
+      "Generate lorem ipsum placeholder text by paragraphs, sentences or an exact word count, with or without the classic opening. Runs in your browser.",
+    category: "Generators",
+    icon: LetterText,
+    keywords: ["lorem ipsum", "lipsum", "placeholder text", "dummy text", "filler text", "mockup", "design", "paragraphs", "words"],
+    related: ["slug-generator", "markdown-table-generator", "password-generator", "uuid-generator"],
     phase: 3,
   },
 ];

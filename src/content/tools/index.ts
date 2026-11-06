@@ -19,6 +19,7 @@ import { jsonFormatterContent } from "./json-formatter";
 import { jsonToTypescriptContent } from "./json-to-typescript";
 import { jwtDecoderContent } from "./jwt-decoder";
 import { jwtEncoderContent } from "./jwt-encoder";
+import { loremIpsumGeneratorContent } from "./lorem-ipsum-generator";
 import { markdownTableContent } from "./markdown-table-generator";
 import { numberBaseContent } from "./number-base-converter";
 import { passwordGeneratorContent } from "./password-generator";
@@ -74,6 +75,7 @@ export const TOOL_CONTENT: Record<string, ToolContent> = {
   "markdown-table-generator": markdownTableContent,
   "env-json-converter": envJsonContent,
   "query-string-json-converter": queryStringJsonContent,
+  "lorem-ipsum-generator": loremIpsumGeneratorContent,
 };
 
 export function getToolContent(slug: string): ToolContent {
