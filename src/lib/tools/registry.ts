@@ -23,6 +23,7 @@ import {
   KeySquare,
   LetterText,
   Link2,
+  ListOrdered,
   ListTree,
   Network,
   Palette,
@@ -106,7 +107,7 @@ export const TOOLS: Tool[] = [
     category: "Generators",
     icon: Fingerprint,
     keywords: ["uuid", "guid", "v4", "v7", "random", "identifier", "bulk"],
-    related: ["timestamp-converter", "base64-encoder-decoder", "json-formatter"],
+    related: ["timestamp-converter", "base64-encoder-decoder", "json-formatter", "ulid-generator"],
     phase: 1,
   },
   {
@@ -119,7 +120,7 @@ export const TOOLS: Tool[] = [
     category: "Text & Data",
     icon: Clock,
     keywords: ["unix", "epoch", "timestamp", "date", "iso 8601", "utc", "time"],
-    related: ["cron-parser", "uuid-generator", "jwt-decoder", "number-base-converter", "http-status-codes", "iso-duration-converter"],
+    related: ["cron-parser", "uuid-generator", "jwt-decoder", "number-base-converter", "http-status-codes", "iso-duration-converter", "ulid-generator"],
     phase: 1,
   },
   {
@@ -549,6 +550,19 @@ export const TOOLS: Tool[] = [
     icon: LetterText,
     keywords: ["lorem ipsum", "lipsum", "placeholder text", "dummy text", "filler text", "mockup", "design", "paragraphs", "words"],
     related: ["slug-generator", "markdown-table-generator", "password-generator", "uuid-generator"],
+    phase: 3,
+  },
+  {
+    slug: "ulid-generator",
+    name: "ULID Generator",
+    seoTitle: "ULID Generator & Decoder — Sortable IDs, Free",
+    tagline: "Generate and decode sortable ULIDs",
+    description:
+      "Generate time-sortable ULIDs in bulk, with optional monotonic ordering, and decode any ULID's timestamp, random part and UUID form. Runs in your browser.",
+    category: "Generators",
+    icon: ListOrdered,
+    keywords: ["ulid", "sortable id", "lexicographic", "crockford base32", "monotonic", "identifier", "primary key", "decode", "uuid"],
+    related: ["uuid-generator", "timestamp-converter", "number-base-converter"],
     phase: 3,
   },
 ];

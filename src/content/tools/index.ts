@@ -31,6 +31,7 @@ import { sortLinesContent } from "./sort-lines";
 import { subnetCalculatorContent } from "./subnet-calculator";
 import { timestampConverterContent } from "./timestamp-converter";
 import { tokenCounterContent } from "./token-counter";
+import { ulidGeneratorContent } from "./ulid-generator";
 import { unicodeInspectorContent } from "./unicode-inspector";
 import { urlEncoderContent } from "./url-encoder-decoder";
 import { urlParserContent } from "./url-parser";
@@ -42,6 +43,7 @@ export const TOOL_CONTENT: Record<string, ToolContent> = {
   "json-formatter": jsonFormatterContent,
   "base64-encoder-decoder": base64Content,
   "uuid-generator": uuidGeneratorContent,
+  "ulid-generator": ulidGeneratorContent,
   "timestamp-converter": timestampConverterContent,
   "jwt-decoder": jwtDecoderContent,
   "regex-tester": regexTesterContent,

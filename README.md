@@ -12,7 +12,7 @@ Fast, private developer utilities that run entirely in your browser. Paste a JWT
 | --- | --- |
 | Formatting | JSON Formatter & Validator, YAML ⇄ JSON Converter, CSV ⇄ JSON Converter, JSON to TypeScript, cURL to Fetch Converter, Markdown Table Generator, .env ⇄ JSON Converter |
 | Encoding | Base64 / Base64URL, URL Encoder / Decoder, URL Parser, Query String ⇄ JSON Converter, HTML Entity Encoder / Decoder, JSON Escape / Unescape, JWT Decoder, JWT Encoder, Number Base Converter |
-| Generators | UUID Generator (v4, v7), Password Generator, Lorem Ipsum Generator, Hash Generator (SHA-1/256/384/512), HMAC Generator |
+| Generators | UUID Generator (v4, v7), ULID Generator & Decoder, Password Generator, Lorem Ipsum Generator, Hash Generator (SHA-1/256/384/512), HMAC Generator |
 | Text & Data | Timestamp Converter, Regex Tester, Cron Expression Parser, Case Converter, Slug Generator, Diff Checker, Color Converter (HEX/RGB/HSL), Chmod Calculator, Subnet Calculator (IPv4 CIDR), Sort & Dedupe Lines, Semver Range Checker, Unicode Inspector, Data Size Converter (bytes, KB/KiB, bits), HTTP Status Codes, ISO 8601 Duration Converter |
 | AI Tools | Token Counter |
 
