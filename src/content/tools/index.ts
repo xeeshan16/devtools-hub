@@ -29,6 +29,7 @@ import { semverCheckerContent } from "./semver-checker";
 import { slugGeneratorContent } from "./slug-generator";
 import { sortLinesContent } from "./sort-lines";
 import { subnetCalculatorContent } from "./subnet-calculator";
+import { textHexContent } from "./text-hex-converter";
 import { timestampConverterContent } from "./timestamp-converter";
 import { tokenCounterContent } from "./token-counter";
 import { ulidGeneratorContent } from "./ulid-generator";
@@ -59,6 +60,7 @@ export const TOOL_CONTENT: Record<string, ToolContent> = {
   "hash-generator": hashGeneratorContent,
   "hmac-generator": hmacGeneratorContent,
   "number-base-converter": numberBaseContent,
+  "text-hex-converter": textHexContent,
   "html-entity-encoder-decoder": htmlEntitiesContent,
   "color-converter": colorConverterContent,
   "csv-json-converter": csvJsonContent,

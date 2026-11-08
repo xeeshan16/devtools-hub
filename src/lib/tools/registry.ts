@@ -9,6 +9,7 @@ import {
   Clock,
   CodeXml,
   FileCog,
+  FileDigit,
   FileJson,
   FileLock,
   FileSignature,
@@ -94,7 +95,7 @@ export const TOOLS: Tool[] = [
     category: "Encoding",
     icon: Binary,
     keywords: ["base64", "base64url", "btoa", "atob", "encode", "decode"],
-    related: ["jwt-decoder", "json-formatter", "uuid-generator", "url-encoder-decoder", "hash-generator", "number-base-converter", "html-entity-encoder-decoder", "json-escape-unescape"],
+    related: ["jwt-decoder", "json-formatter", "uuid-generator", "url-encoder-decoder", "hash-generator", "number-base-converter", "html-entity-encoder-decoder", "json-escape-unescape", "text-hex-converter"],
     phase: 1,
   },
   {
@@ -159,7 +160,7 @@ export const TOOLS: Tool[] = [
     category: "Encoding",
     icon: Link2,
     keywords: ["url", "percent encoding", "urlencode", "urldecode", "encodeURIComponent", "query string", "escape"],
-    related: ["base64-encoder-decoder", "jwt-decoder", "json-formatter", "html-entity-encoder-decoder", "url-parser", "json-escape-unescape", "unicode-inspector", "slug-generator", "query-string-json-converter"],
+    related: ["base64-encoder-decoder", "jwt-decoder", "json-formatter", "html-entity-encoder-decoder", "url-parser", "json-escape-unescape", "unicode-inspector", "slug-generator", "query-string-json-converter", "text-hex-converter"],
     phase: 3,
   },
   {
@@ -211,7 +212,7 @@ export const TOOLS: Tool[] = [
     category: "Encoding",
     icon: Calculator,
     keywords: ["binary", "hex", "hexadecimal", "octal", "decimal", "radix", "base converter", "bigint"],
-    related: ["base64-encoder-decoder", "hash-generator", "timestamp-converter", "color-converter", "chmod-calculator", "subnet-calculator", "data-size-converter"],
+    related: ["base64-encoder-decoder", "hash-generator", "timestamp-converter", "color-converter", "chmod-calculator", "subnet-calculator", "data-size-converter", "text-hex-converter"],
     phase: 3,
   },
   {
@@ -445,7 +446,7 @@ export const TOOLS: Tool[] = [
     category: "Text & Data",
     icon: ScanSearch,
     keywords: ["unicode", "code point", "zero width space", "invisible characters", "hidden characters", "utf-8", "utf-16", "nbsp", "bom", "emoji", "grapheme", "character inspector"],
-    related: ["json-escape-unescape", "html-entity-encoder-decoder", "url-encoder-decoder", "diff-checker", "token-counter", "slug-generator"],
+    related: ["json-escape-unescape", "html-entity-encoder-decoder", "url-encoder-decoder", "diff-checker", "token-counter", "slug-generator", "text-hex-converter"],
     phase: 3,
   },
   {
@@ -563,6 +564,19 @@ export const TOOLS: Tool[] = [
     icon: ListOrdered,
     keywords: ["ulid", "sortable id", "lexicographic", "crockford base32", "monotonic", "identifier", "primary key", "decode", "uuid"],
     related: ["uuid-generator", "timestamp-converter", "number-base-converter"],
+    phase: 3,
+  },
+  {
+    slug: "text-hex-converter",
+    name: "Text ⇄ Hex Converter",
+    seoTitle: "Text to Hex Converter — Hex to Text, UTF-8",
+    tagline: "Convert text to hex bytes and hex back to text",
+    description:
+      "Convert text to UTF-8 hex as a plain run, spaced bytes, 0x arrays or \\x escapes, and decode hex dumps back to text with clear errors. Runs in your browser.",
+    category: "Encoding",
+    icon: FileDigit,
+    keywords: ["hex", "hexadecimal", "text to hex", "hex to text", "ascii to hex", "utf-8", "bytes", "hex dump", "0x", "\\x", "byte array"],
+    related: ["number-base-converter", "base64-encoder-decoder", "unicode-inspector", "url-encoder-decoder"],
     phase: 3,
   },
 ];
