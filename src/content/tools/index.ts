@@ -37,6 +37,7 @@ import { unicodeInspectorContent } from "./unicode-inspector";
 import { urlEncoderContent } from "./url-encoder-decoder";
 import { urlParserContent } from "./url-parser";
 import { uuidGeneratorContent } from "./uuid-generator";
+import { wordCounterContent } from "./word-counter";
 import { yamlJsonContent } from "./yaml-json-converter";
 
 /** Keyed by tool slug — a tool without content is caught by the registry test. */
@@ -68,6 +69,7 @@ export const TOOL_CONTENT: Record<string, ToolContent> = {
   "url-parser": urlParserContent,
   "subnet-calculator": subnetCalculatorContent,
   "sort-lines": sortLinesContent,
+  "word-counter": wordCounterContent,
   "json-to-typescript": jsonToTypescriptContent,
   "json-escape-unescape": jsonEscapeContent,
   "semver-checker": semverCheckerContent,

@@ -38,6 +38,7 @@ import {
   Table2,
   Tags,
   Terminal,
+  WholeWord,
   type LucideIcon,
 } from "lucide-react";
 
@@ -303,7 +304,7 @@ export const TOOLS: Tool[] = [
     category: "AI Tools",
     icon: Hash,
     keywords: ["tokens", "tokenizer", "gpt", "claude", "gemini", "tiktoken", "prompt", "context window"],
-    related: ["case-converter", "regex-tester", "diff-checker", "unicode-inspector"],
+    related: ["case-converter", "regex-tester", "diff-checker", "unicode-inspector", "word-counter"],
     phase: 3,
   },
   {
@@ -316,7 +317,7 @@ export const TOOLS: Tool[] = [
     category: "Text & Data",
     icon: CaseSensitive,
     keywords: ["case", "camelcase", "snake case", "kebab case", "pascalcase", "title case", "convert"],
-    related: ["json-formatter", "regex-tester", "yaml-json-converter", "color-converter", "sort-lines", "json-to-typescript", "slug-generator"],
+    related: ["json-formatter", "regex-tester", "yaml-json-converter", "color-converter", "sort-lines", "json-to-typescript", "slug-generator", "word-counter"],
     phase: 3,
   },
   {
@@ -394,7 +395,7 @@ export const TOOLS: Tool[] = [
     category: "Text & Data",
     icon: ArrowDownAZ,
     keywords: ["sort", "sort lines", "remove duplicates", "dedupe", "unique", "uniq", "duplicate lines", "blank lines", "natural sort", "alphabetize", "list"],
-    related: ["diff-checker", "case-converter", "csv-json-converter", "regex-tester", "semver-checker", "markdown-table-generator", "slug-generator"],
+    related: ["diff-checker", "case-converter", "csv-json-converter", "regex-tester", "semver-checker", "markdown-table-generator", "slug-generator", "word-counter"],
     phase: 3,
   },
   {
@@ -446,7 +447,7 @@ export const TOOLS: Tool[] = [
     category: "Text & Data",
     icon: ScanSearch,
     keywords: ["unicode", "code point", "zero width space", "invisible characters", "hidden characters", "utf-8", "utf-16", "nbsp", "bom", "emoji", "grapheme", "character inspector"],
-    related: ["json-escape-unescape", "html-entity-encoder-decoder", "url-encoder-decoder", "diff-checker", "token-counter", "slug-generator", "text-hex-converter"],
+    related: ["json-escape-unescape", "html-entity-encoder-decoder", "url-encoder-decoder", "diff-checker", "token-counter", "slug-generator", "text-hex-converter", "word-counter"],
     phase: 3,
   },
   {
@@ -550,7 +551,7 @@ export const TOOLS: Tool[] = [
     category: "Generators",
     icon: LetterText,
     keywords: ["lorem ipsum", "lipsum", "placeholder text", "dummy text", "filler text", "mockup", "design", "paragraphs", "words"],
-    related: ["slug-generator", "markdown-table-generator", "password-generator", "uuid-generator"],
+    related: ["slug-generator", "markdown-table-generator", "password-generator", "uuid-generator", "word-counter"],
     phase: 3,
   },
   {
@@ -577,6 +578,19 @@ export const TOOLS: Tool[] = [
     icon: FileDigit,
     keywords: ["hex", "hexadecimal", "text to hex", "hex to text", "ascii to hex", "utf-8", "bytes", "hex dump", "0x", "\\x", "byte array"],
     related: ["number-base-converter", "base64-encoder-decoder", "unicode-inspector", "url-encoder-decoder"],
+    phase: 3,
+  },
+  {
+    slug: "word-counter",
+    name: "Word Counter",
+    seoTitle: "Word Counter — Words, Characters & Reading Time",
+    tagline: "Count words, characters, sentences and reading time",
+    description:
+      "Count words, characters with and without spaces, sentences, paragraphs and lines, with reading time and UTF-8 byte size. Runs in your browser.",
+    category: "Text & Data",
+    icon: WholeWord,
+    keywords: ["word count", "character count", "letter count", "sentence count", "paragraph count", "reading time", "speaking time", "text length", "bytes"],
+    related: ["token-counter", "case-converter", "lorem-ipsum-generator", "unicode-inspector", "sort-lines"],
     phase: 3,
   },
 ];
