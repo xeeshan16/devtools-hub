@@ -6,6 +6,7 @@ import {
   CalendarClock,
   Calculator,
   CaseSensitive,
+  CaseUpper,
   Clock,
   CodeXml,
   FileCog,
@@ -96,7 +97,7 @@ export const TOOLS: Tool[] = [
     category: "Encoding",
     icon: Binary,
     keywords: ["base64", "base64url", "btoa", "atob", "encode", "decode"],
-    related: ["jwt-decoder", "json-formatter", "uuid-generator", "url-encoder-decoder", "hash-generator", "number-base-converter", "html-entity-encoder-decoder", "json-escape-unescape", "text-hex-converter"],
+    related: ["jwt-decoder", "json-formatter", "uuid-generator", "url-encoder-decoder", "hash-generator", "number-base-converter", "html-entity-encoder-decoder", "json-escape-unescape", "text-hex-converter", "base32-encoder-decoder"],
     phase: 1,
   },
   {
@@ -564,7 +565,7 @@ export const TOOLS: Tool[] = [
     category: "Generators",
     icon: ListOrdered,
     keywords: ["ulid", "sortable id", "lexicographic", "crockford base32", "monotonic", "identifier", "primary key", "decode", "uuid"],
-    related: ["uuid-generator", "timestamp-converter", "number-base-converter"],
+    related: ["uuid-generator", "timestamp-converter", "number-base-converter", "base32-encoder-decoder"],
     phase: 3,
   },
   {
@@ -577,7 +578,7 @@ export const TOOLS: Tool[] = [
     category: "Encoding",
     icon: FileDigit,
     keywords: ["hex", "hexadecimal", "text to hex", "hex to text", "ascii to hex", "utf-8", "bytes", "hex dump", "0x", "\\x", "byte array"],
-    related: ["number-base-converter", "base64-encoder-decoder", "unicode-inspector", "url-encoder-decoder"],
+    related: ["number-base-converter", "base64-encoder-decoder", "unicode-inspector", "url-encoder-decoder", "base32-encoder-decoder"],
     phase: 3,
   },
   {
@@ -591,6 +592,19 @@ export const TOOLS: Tool[] = [
     icon: WholeWord,
     keywords: ["word count", "character count", "letter count", "sentence count", "paragraph count", "reading time", "speaking time", "text length", "bytes"],
     related: ["token-counter", "case-converter", "lorem-ipsum-generator", "unicode-inspector", "sort-lines"],
+    phase: 3,
+  },
+  {
+    slug: "base32-encoder-decoder",
+    name: "Base32 Encoder / Decoder",
+    seoTitle: "Base32 Encoder & Decoder — RFC 4648, Crockford",
+    tagline: "Encode and decode Base32, Base32hex and Crockford",
+    description:
+      "Encode text as Base32 and decode it back, with the RFC 4648, Base32hex and Crockford alphabets. Decodes TOTP secrets to hex. Runs in your browser.",
+    category: "Encoding",
+    icon: CaseUpper,
+    keywords: ["base32", "base32hex", "crockford", "rfc 4648", "totp secret", "2fa", "otp", "encode", "decode", "onion"],
+    related: ["base64-encoder-decoder", "text-hex-converter", "ulid-generator", "hmac-generator", "number-base-converter"],
     phase: 3,
   },
 ];
