@@ -9,6 +9,7 @@ import {
   CaseUpper,
   Clock,
   CodeXml,
+  Cookie,
   FileCog,
   FileDigit,
   FileJson,
@@ -136,7 +137,7 @@ export const TOOLS: Tool[] = [
     category: "Encoding",
     icon: KeyRound,
     keywords: ["jwt", "json web token", "bearer", "claims", "exp", "auth"],
-    related: ["base64-encoder-decoder", "json-formatter", "jwt-encoder", "http-status-codes"],
+    related: ["base64-encoder-decoder", "json-formatter", "jwt-encoder", "http-status-codes", "cookie-parser"],
     phase: 2,
   },
   {
@@ -474,7 +475,7 @@ export const TOOLS: Tool[] = [
     category: "Text & Data",
     icon: Globe,
     keywords: ["http", "status code", "response code", "404", "500", "403", "401", "429", "rfc 9110", "error code", "redirect", "rest api"],
-    related: ["url-parser", "jwt-decoder", "timestamp-converter", "regex-tester", "curl-to-fetch"],
+    related: ["url-parser", "jwt-decoder", "timestamp-converter", "regex-tester", "curl-to-fetch", "cookie-parser"],
     phase: 3,
   },
   {
@@ -487,7 +488,7 @@ export const TOOLS: Tool[] = [
     category: "Formatting",
     icon: Terminal,
     keywords: ["curl", "fetch", "convert curl", "curl to javascript", "curl to js", "copy as curl", "http request", "api", "node fetch", "rest"],
-    related: ["json-to-typescript", "url-parser", "http-status-codes", "json-formatter"],
+    related: ["json-to-typescript", "url-parser", "http-status-codes", "json-formatter", "cookie-parser"],
     phase: 3,
   },
   {
@@ -605,6 +606,19 @@ export const TOOLS: Tool[] = [
     icon: CaseUpper,
     keywords: ["base32", "base32hex", "crockford", "rfc 4648", "totp secret", "2fa", "otp", "encode", "decode", "onion"],
     related: ["base64-encoder-decoder", "text-hex-converter", "ulid-generator", "hmac-generator", "number-base-converter"],
+    phase: 3,
+  },
+  {
+    slug: "cookie-parser",
+    name: "Cookie Parser",
+    seoTitle: "Cookie Parser — Decode Cookie & Set-Cookie Headers",
+    tagline: "Parse Cookie and Set-Cookie headers and spot rejected cookies",
+    description:
+      "Parse Cookie and Set-Cookie headers into decoded values, lifetimes, domains and flags, with warnings for cookies browsers reject. Runs in your browser.",
+    category: "Text & Data",
+    icon: Cookie,
+    keywords: ["cookie", "set-cookie", "cookie header", "samesite", "httponly", "secure", "max-age", "expires", "__host", "session cookie"],
+    related: ["jwt-decoder", "url-encoder-decoder", "http-status-codes", "curl-to-fetch", "timestamp-converter"],
     phase: 3,
   },
 ];

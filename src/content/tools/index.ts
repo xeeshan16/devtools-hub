@@ -4,6 +4,7 @@ import { base64Content } from "./base64-encoder-decoder";
 import { caseConverterContent } from "./case-converter";
 import { chmodCalculatorContent } from "./chmod-calculator";
 import { colorConverterContent } from "./color-converter";
+import { cookieParserContent } from "./cookie-parser";
 import { cronParserContent } from "./cron-parser";
 import { csvJsonContent } from "./csv-json-converter";
 import { curlToFetchContent } from "./curl-to-fetch";
@@ -64,6 +65,7 @@ export const TOOL_CONTENT: Record<string, ToolContent> = {
   "number-base-converter": numberBaseContent,
   "text-hex-converter": textHexContent,
   "base32-encoder-decoder": base32Content,
+  "cookie-parser": cookieParserContent,
   "html-entity-encoder-decoder": htmlEntitiesContent,
   "color-converter": colorConverterContent,
   "csv-json-converter": csvJsonContent,
