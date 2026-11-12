@@ -25,6 +25,7 @@ import {
   KeyRound,
   KeySquare,
   LetterText,
+  LockKeyhole,
   Link2,
   ListOrdered,
   ListTree,
@@ -98,7 +99,7 @@ export const TOOLS: Tool[] = [
     category: "Encoding",
     icon: Binary,
     keywords: ["base64", "base64url", "btoa", "atob", "encode", "decode"],
-    related: ["jwt-decoder", "json-formatter", "uuid-generator", "url-encoder-decoder", "hash-generator", "number-base-converter", "html-entity-encoder-decoder", "json-escape-unescape", "text-hex-converter", "base32-encoder-decoder"],
+    related: ["jwt-decoder", "json-formatter", "uuid-generator", "url-encoder-decoder", "hash-generator", "number-base-converter", "html-entity-encoder-decoder", "json-escape-unescape", "text-hex-converter", "base32-encoder-decoder", "basic-auth-header"],
     phase: 1,
   },
   {
@@ -137,7 +138,7 @@ export const TOOLS: Tool[] = [
     category: "Encoding",
     icon: KeyRound,
     keywords: ["jwt", "json web token", "bearer", "claims", "exp", "auth"],
-    related: ["base64-encoder-decoder", "json-formatter", "jwt-encoder", "http-status-codes", "cookie-parser"],
+    related: ["base64-encoder-decoder", "json-formatter", "jwt-encoder", "http-status-codes", "cookie-parser", "basic-auth-header"],
     phase: 2,
   },
   {
@@ -475,7 +476,7 @@ export const TOOLS: Tool[] = [
     category: "Text & Data",
     icon: Globe,
     keywords: ["http", "status code", "response code", "404", "500", "403", "401", "429", "rfc 9110", "error code", "redirect", "rest api"],
-    related: ["url-parser", "jwt-decoder", "timestamp-converter", "regex-tester", "curl-to-fetch", "cookie-parser"],
+    related: ["url-parser", "jwt-decoder", "timestamp-converter", "regex-tester", "curl-to-fetch", "cookie-parser", "basic-auth-header"],
     phase: 3,
   },
   {
@@ -488,7 +489,7 @@ export const TOOLS: Tool[] = [
     category: "Formatting",
     icon: Terminal,
     keywords: ["curl", "fetch", "convert curl", "curl to javascript", "curl to js", "copy as curl", "http request", "api", "node fetch", "rest"],
-    related: ["json-to-typescript", "url-parser", "http-status-codes", "json-formatter", "cookie-parser"],
+    related: ["json-to-typescript", "url-parser", "http-status-codes", "json-formatter", "cookie-parser", "basic-auth-header"],
     phase: 3,
   },
   {
@@ -618,7 +619,20 @@ export const TOOLS: Tool[] = [
     category: "Text & Data",
     icon: Cookie,
     keywords: ["cookie", "set-cookie", "cookie header", "samesite", "httponly", "secure", "max-age", "expires", "__host", "session cookie"],
-    related: ["jwt-decoder", "url-encoder-decoder", "http-status-codes", "curl-to-fetch", "timestamp-converter"],
+    related: ["jwt-decoder", "url-encoder-decoder", "http-status-codes", "curl-to-fetch", "timestamp-converter", "basic-auth-header"],
+    phase: 3,
+  },
+  {
+    slug: "basic-auth-header",
+    name: "Basic Auth Header Generator",
+    seoTitle: "Basic Auth Header Generator & Decoder",
+    tagline: "Build and decode HTTP Basic Authorization headers",
+    description:
+      "Build an HTTP Basic Authorization header from a username and password, or decode one back, with RFC 7617 checks for common mistakes. Runs in your browser.",
+    category: "Encoding",
+    icon: LockKeyhole,
+    keywords: ["basic auth", "authorization header", "http basic", "rfc 7617", "username password", "base64", "401", "proxy-authorization", "curl -u", "credentials"],
+    related: ["base64-encoder-decoder", "jwt-decoder", "curl-to-fetch", "http-status-codes", "cookie-parser"],
     phase: 3,
   },
 ];
