@@ -10,6 +10,7 @@ import {
   Clock,
   CodeXml,
   Cookie,
+  DatabaseZap,
   FileCog,
   FileDigit,
   FileJson,
@@ -476,7 +477,7 @@ export const TOOLS: Tool[] = [
     category: "Text & Data",
     icon: Globe,
     keywords: ["http", "status code", "response code", "404", "500", "403", "401", "429", "rfc 9110", "error code", "redirect", "rest api"],
-    related: ["url-parser", "jwt-decoder", "timestamp-converter", "regex-tester", "curl-to-fetch", "cookie-parser", "basic-auth-header"],
+    related: ["url-parser", "jwt-decoder", "timestamp-converter", "regex-tester", "curl-to-fetch", "cookie-parser", "basic-auth-header", "cache-control-parser"],
     phase: 3,
   },
   {
@@ -489,7 +490,7 @@ export const TOOLS: Tool[] = [
     category: "Formatting",
     icon: Terminal,
     keywords: ["curl", "fetch", "convert curl", "curl to javascript", "curl to js", "copy as curl", "http request", "api", "node fetch", "rest"],
-    related: ["json-to-typescript", "url-parser", "http-status-codes", "json-formatter", "cookie-parser", "basic-auth-header"],
+    related: ["json-to-typescript", "url-parser", "http-status-codes", "json-formatter", "cookie-parser", "basic-auth-header", "cache-control-parser"],
     phase: 3,
   },
   {
@@ -502,7 +503,7 @@ export const TOOLS: Tool[] = [
     category: "Text & Data",
     icon: Hourglass,
     keywords: ["iso 8601", "duration", "pt1h", "period", "xsd duration", "java duration", "youtube duration", "seconds to iso", "time span", "timespan"],
-    related: ["timestamp-converter", "cron-parser", "data-size-converter"],
+    related: ["timestamp-converter", "cron-parser", "data-size-converter", "cache-control-parser"],
     phase: 3,
   },
   {
@@ -619,7 +620,7 @@ export const TOOLS: Tool[] = [
     category: "Text & Data",
     icon: Cookie,
     keywords: ["cookie", "set-cookie", "cookie header", "samesite", "httponly", "secure", "max-age", "expires", "__host", "session cookie"],
-    related: ["jwt-decoder", "url-encoder-decoder", "http-status-codes", "curl-to-fetch", "timestamp-converter", "basic-auth-header"],
+    related: ["jwt-decoder", "url-encoder-decoder", "http-status-codes", "curl-to-fetch", "timestamp-converter", "basic-auth-header", "cache-control-parser"],
     phase: 3,
   },
   {
@@ -633,6 +634,19 @@ export const TOOLS: Tool[] = [
     icon: LockKeyhole,
     keywords: ["basic auth", "authorization header", "http basic", "rfc 7617", "username password", "base64", "401", "proxy-authorization", "curl -u", "credentials"],
     related: ["base64-encoder-decoder", "jwt-decoder", "curl-to-fetch", "http-status-codes", "cookie-parser"],
+    phase: 3,
+  },
+  {
+    slug: "cache-control-parser",
+    name: "Cache-Control Parser",
+    seoTitle: "Cache-Control Header Parser — Explain Caching Directives",
+    tagline: "Explain a Cache-Control header and catch caching mistakes",
+    description:
+      "Parse a Cache-Control header into plain-language directives, see how browsers and CDNs cache the response, and catch conflicting directives. Runs in your browser.",
+    category: "Text & Data",
+    icon: DatabaseZap,
+    keywords: ["cache-control", "http caching", "max-age", "s-maxage", "no-cache", "no-store", "stale-while-revalidate", "immutable", "cdn", "rfc 9111"],
+    related: ["http-status-codes", "cookie-parser", "curl-to-fetch", "iso-duration-converter"],
     phase: 3,
   },
 ];

@@ -2,6 +2,7 @@ import type { ToolContent } from "@/content/types";
 import { base32Content } from "./base32-encoder-decoder";
 import { basicAuthContent } from "./basic-auth-header";
 import { base64Content } from "./base64-encoder-decoder";
+import { cacheControlParserContent } from "./cache-control-parser";
 import { caseConverterContent } from "./case-converter";
 import { chmodCalculatorContent } from "./chmod-calculator";
 import { colorConverterContent } from "./color-converter";
@@ -67,6 +68,7 @@ export const TOOL_CONTENT: Record<string, ToolContent> = {
   "text-hex-converter": textHexContent,
   "base32-encoder-decoder": base32Content,
   "cookie-parser": cookieParserContent,
+  "cache-control-parser": cacheControlParserContent,
   "basic-auth-header": basicAuthContent,
   "html-entity-encoder-decoder": htmlEntitiesContent,
   "color-converter": colorConverterContent,
