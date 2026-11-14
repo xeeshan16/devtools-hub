@@ -8,6 +8,7 @@ import { chmodCalculatorContent } from "./chmod-calculator";
 import { colorConverterContent } from "./color-converter";
 import { cookieParserContent } from "./cookie-parser";
 import { cronParserContent } from "./cron-parser";
+import { cspParserContent } from "./csp-parser";
 import { csvJsonContent } from "./csv-json-converter";
 import { curlToFetchContent } from "./curl-to-fetch";
 import { dataSizeConverterContent } from "./data-size-converter";
@@ -69,6 +70,7 @@ export const TOOL_CONTENT: Record<string, ToolContent> = {
   "base32-encoder-decoder": base32Content,
   "cookie-parser": cookieParserContent,
   "cache-control-parser": cacheControlParserContent,
+  "csp-parser": cspParserContent,
   "basic-auth-header": basicAuthContent,
   "html-entity-encoder-decoder": htmlEntitiesContent,
   "color-converter": colorConverterContent,

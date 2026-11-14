@@ -37,6 +37,7 @@ import {
   Regex,
   ScanSearch,
   Sheet,
+  ShieldAlert,
   ShieldCheck,
   Slash,
   Table2,
@@ -191,7 +192,7 @@ export const TOOLS: Tool[] = [
     category: "Generators",
     icon: ShieldCheck,
     keywords: ["hash", "sha256", "sha-256", "sha1", "sha512", "checksum", "digest", "sri", "integrity"],
-    related: ["base64-encoder-decoder", "password-generator", "jwt-encoder", "number-base-converter", "hmac-generator"],
+    related: ["base64-encoder-decoder", "password-generator", "jwt-encoder", "number-base-converter", "hmac-generator", "csp-parser"],
     phase: 3,
   },
   {
@@ -477,7 +478,7 @@ export const TOOLS: Tool[] = [
     category: "Text & Data",
     icon: Globe,
     keywords: ["http", "status code", "response code", "404", "500", "403", "401", "429", "rfc 9110", "error code", "redirect", "rest api"],
-    related: ["url-parser", "jwt-decoder", "timestamp-converter", "regex-tester", "curl-to-fetch", "cookie-parser", "basic-auth-header", "cache-control-parser"],
+    related: ["url-parser", "jwt-decoder", "timestamp-converter", "regex-tester", "curl-to-fetch", "cookie-parser", "basic-auth-header", "cache-control-parser", "csp-parser"],
     phase: 3,
   },
   {
@@ -490,7 +491,7 @@ export const TOOLS: Tool[] = [
     category: "Formatting",
     icon: Terminal,
     keywords: ["curl", "fetch", "convert curl", "curl to javascript", "curl to js", "copy as curl", "http request", "api", "node fetch", "rest"],
-    related: ["json-to-typescript", "url-parser", "http-status-codes", "json-formatter", "cookie-parser", "basic-auth-header", "cache-control-parser"],
+    related: ["json-to-typescript", "url-parser", "http-status-codes", "json-formatter", "cookie-parser", "basic-auth-header", "cache-control-parser", "csp-parser"],
     phase: 3,
   },
   {
@@ -620,7 +621,7 @@ export const TOOLS: Tool[] = [
     category: "Text & Data",
     icon: Cookie,
     keywords: ["cookie", "set-cookie", "cookie header", "samesite", "httponly", "secure", "max-age", "expires", "__host", "session cookie"],
-    related: ["jwt-decoder", "url-encoder-decoder", "http-status-codes", "curl-to-fetch", "timestamp-converter", "basic-auth-header", "cache-control-parser"],
+    related: ["jwt-decoder", "url-encoder-decoder", "http-status-codes", "curl-to-fetch", "timestamp-converter", "basic-auth-header", "cache-control-parser", "csp-parser"],
     phase: 3,
   },
   {
@@ -646,7 +647,20 @@ export const TOOLS: Tool[] = [
     category: "Text & Data",
     icon: DatabaseZap,
     keywords: ["cache-control", "http caching", "max-age", "s-maxage", "no-cache", "no-store", "stale-while-revalidate", "immutable", "cdn", "rfc 9111"],
-    related: ["http-status-codes", "cookie-parser", "curl-to-fetch", "iso-duration-converter"],
+    related: ["http-status-codes", "cookie-parser", "curl-to-fetch", "iso-duration-converter", "csp-parser"],
+    phase: 3,
+  },
+  {
+    slug: "csp-parser",
+    name: "CSP Parser",
+    seoTitle: "Content-Security-Policy Parser — Check a CSP Header",
+    tagline: "Explain a Content-Security-Policy and find its weak spots",
+    description:
+      "Parse a Content-Security-Policy header, see which directive governs each resource type, and catch unsafe sources and syntax mistakes. Runs in your browser.",
+    category: "Text & Data",
+    icon: ShieldAlert,
+    keywords: ["csp", "content-security-policy", "script-src", "default-src", "unsafe-inline", "nonce", "strict-dynamic", "xss", "security headers", "report-only"],
+    related: ["cache-control-parser", "cookie-parser", "http-status-codes", "curl-to-fetch", "hash-generator"],
     phase: 3,
   },
 ];
