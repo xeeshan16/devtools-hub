@@ -12,6 +12,7 @@ import {
   Cookie,
   DatabaseZap,
   FileCog,
+  FileCheck,
   FileDigit,
   FileJson,
   FileLock,
@@ -192,7 +193,7 @@ export const TOOLS: Tool[] = [
     category: "Generators",
     icon: ShieldCheck,
     keywords: ["hash", "sha256", "sha-256", "sha1", "sha512", "checksum", "digest", "sri", "integrity"],
-    related: ["base64-encoder-decoder", "password-generator", "jwt-encoder", "number-base-converter", "hmac-generator", "csp-parser"],
+    related: ["base64-encoder-decoder", "password-generator", "jwt-encoder", "number-base-converter", "hmac-generator", "csp-parser", "sri-hash-generator"],
     phase: 3,
   },
   {
@@ -206,6 +207,19 @@ export const TOOLS: Tool[] = [
     icon: KeySquare,
     keywords: ["hmac", "hmac-sha256", "hmac sha256", "signature", "webhook", "verify webhook", "x-hub-signature-256", "message authentication", "mac", "api signing"],
     related: ["hash-generator", "jwt-encoder", "base64-encoder-decoder", "number-base-converter"],
+    phase: 3,
+  },
+  {
+    slug: "sri-hash-generator",
+    name: "SRI Hash Generator",
+    seoTitle: "SRI Hash Generator — Subresource Integrity Online",
+    tagline: "Generate and check integrity hashes for scripts and stylesheets",
+    description:
+      "Generate Subresource Integrity hashes (sha384 and more) for a script or stylesheet, get the ready-made tag, and check an integrity value. Runs in your browser.",
+    category: "Generators",
+    icon: FileCheck,
+    keywords: ["sri", "subresource integrity", "integrity attribute", "sha384", "cdn", "script integrity", "crossorigin", "hash", "csp"],
+    related: ["hash-generator", "csp-parser", "base64-encoder-decoder", "hmac-generator"],
     phase: 3,
   },
   {
@@ -660,7 +674,7 @@ export const TOOLS: Tool[] = [
     category: "Text & Data",
     icon: ShieldAlert,
     keywords: ["csp", "content-security-policy", "script-src", "default-src", "unsafe-inline", "nonce", "strict-dynamic", "xss", "security headers", "report-only"],
-    related: ["cache-control-parser", "cookie-parser", "http-status-codes", "curl-to-fetch", "hash-generator"],
+    related: ["cache-control-parser", "cookie-parser", "http-status-codes", "curl-to-fetch", "hash-generator", "sri-hash-generator"],
     phase: 3,
   },
 ];

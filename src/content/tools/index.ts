@@ -33,6 +33,7 @@ import { regexTesterContent } from "./regex-tester";
 import { semverCheckerContent } from "./semver-checker";
 import { slugGeneratorContent } from "./slug-generator";
 import { sortLinesContent } from "./sort-lines";
+import { sriHashContent } from "./sri-hash-generator";
 import { subnetCalculatorContent } from "./subnet-calculator";
 import { textHexContent } from "./text-hex-converter";
 import { timestampConverterContent } from "./timestamp-converter";
@@ -65,6 +66,7 @@ export const TOOL_CONTENT: Record<string, ToolContent> = {
   "url-encoder-decoder": urlEncoderContent,
   "hash-generator": hashGeneratorContent,
   "hmac-generator": hmacGeneratorContent,
+  "sri-hash-generator": sriHashContent,
   "number-base-converter": numberBaseContent,
   "text-hex-converter": textHexContent,
   "base32-encoder-decoder": base32Content,
