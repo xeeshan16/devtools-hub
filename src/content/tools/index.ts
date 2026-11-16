@@ -16,6 +16,7 @@ import { diffCheckerContent } from "./diff-checker";
 import { envJsonContent } from "./env-json-converter";
 import { hashGeneratorContent } from "./hash-generator";
 import { hmacGeneratorContent } from "./hmac-generator";
+import { hstsParserContent } from "./hsts-parser";
 import { htmlEntitiesContent } from "./html-entity-encoder-decoder";
 import { httpStatusCodesContent } from "./http-status-codes";
 import { isoDurationConverterContent } from "./iso-duration-converter";
@@ -73,6 +74,7 @@ export const TOOL_CONTENT: Record<string, ToolContent> = {
   "cookie-parser": cookieParserContent,
   "cache-control-parser": cacheControlParserContent,
   "csp-parser": cspParserContent,
+  "hsts-parser": hstsParserContent,
   "basic-auth-header": basicAuthContent,
   "html-entity-encoder-decoder": htmlEntitiesContent,
   "color-converter": colorConverterContent,

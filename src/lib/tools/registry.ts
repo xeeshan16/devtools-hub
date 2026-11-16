@@ -40,6 +40,7 @@ import {
   Sheet,
   ShieldAlert,
   ShieldCheck,
+  ShieldLock,
   Slash,
   Table2,
   Tags,
@@ -492,7 +493,7 @@ export const TOOLS: Tool[] = [
     category: "Text & Data",
     icon: Globe,
     keywords: ["http", "status code", "response code", "404", "500", "403", "401", "429", "rfc 9110", "error code", "redirect", "rest api"],
-    related: ["url-parser", "jwt-decoder", "timestamp-converter", "regex-tester", "curl-to-fetch", "cookie-parser", "basic-auth-header", "cache-control-parser", "csp-parser"],
+    related: ["url-parser", "jwt-decoder", "timestamp-converter", "regex-tester", "curl-to-fetch", "cookie-parser", "basic-auth-header", "cache-control-parser", "csp-parser", "hsts-parser"],
     phase: 3,
   },
   {
@@ -505,7 +506,7 @@ export const TOOLS: Tool[] = [
     category: "Formatting",
     icon: Terminal,
     keywords: ["curl", "fetch", "convert curl", "curl to javascript", "curl to js", "copy as curl", "http request", "api", "node fetch", "rest"],
-    related: ["json-to-typescript", "url-parser", "http-status-codes", "json-formatter", "cookie-parser", "basic-auth-header", "cache-control-parser", "csp-parser"],
+    related: ["json-to-typescript", "url-parser", "http-status-codes", "json-formatter", "cookie-parser", "basic-auth-header", "cache-control-parser", "csp-parser", "hsts-parser"],
     phase: 3,
   },
   {
@@ -635,7 +636,7 @@ export const TOOLS: Tool[] = [
     category: "Text & Data",
     icon: Cookie,
     keywords: ["cookie", "set-cookie", "cookie header", "samesite", "httponly", "secure", "max-age", "expires", "__host", "session cookie"],
-    related: ["jwt-decoder", "url-encoder-decoder", "http-status-codes", "curl-to-fetch", "timestamp-converter", "basic-auth-header", "cache-control-parser", "csp-parser"],
+    related: ["jwt-decoder", "url-encoder-decoder", "http-status-codes", "curl-to-fetch", "timestamp-converter", "basic-auth-header", "cache-control-parser", "csp-parser", "hsts-parser"],
     phase: 3,
   },
   {
@@ -661,7 +662,7 @@ export const TOOLS: Tool[] = [
     category: "Text & Data",
     icon: DatabaseZap,
     keywords: ["cache-control", "http caching", "max-age", "s-maxage", "no-cache", "no-store", "stale-while-revalidate", "immutable", "cdn", "rfc 9111"],
-    related: ["http-status-codes", "cookie-parser", "curl-to-fetch", "iso-duration-converter", "csp-parser"],
+    related: ["http-status-codes", "cookie-parser", "curl-to-fetch", "iso-duration-converter", "csp-parser", "hsts-parser"],
     phase: 3,
   },
   {
@@ -674,7 +675,20 @@ export const TOOLS: Tool[] = [
     category: "Text & Data",
     icon: ShieldAlert,
     keywords: ["csp", "content-security-policy", "script-src", "default-src", "unsafe-inline", "nonce", "strict-dynamic", "xss", "security headers", "report-only"],
-    related: ["cache-control-parser", "cookie-parser", "http-status-codes", "curl-to-fetch", "hash-generator", "sri-hash-generator"],
+    related: ["cache-control-parser", "cookie-parser", "http-status-codes", "curl-to-fetch", "hash-generator", "sri-hash-generator", "hsts-parser"],
+    phase: 3,
+  },
+  {
+    slug: "hsts-parser",
+    name: "HSTS Parser",
+    seoTitle: "HSTS Header Checker — Strict-Transport-Security Parser",
+    tagline: "Explain a Strict-Transport-Security header and check preload readiness",
+    description:
+      "Parse a Strict-Transport-Security header, see what browsers do with it, check HSTS preload list requirements and catch mistakes that disable it. Runs in your browser.",
+    category: "Text & Data",
+    icon: ShieldLock,
+    keywords: ["hsts", "strict-transport-security", "max-age", "includesubdomains", "preload", "hsts preload", "https", "ssl stripping", "security headers", "rfc 6797"],
+    related: ["csp-parser", "cache-control-parser", "cookie-parser", "http-status-codes", "curl-to-fetch"],
     phase: 3,
   },
 ];
