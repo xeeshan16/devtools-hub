@@ -29,6 +29,7 @@ import { loremIpsumGeneratorContent } from "./lorem-ipsum-generator";
 import { markdownTableContent } from "./markdown-table-generator";
 import { numberBaseContent } from "./number-base-converter";
 import { passwordGeneratorContent } from "./password-generator";
+import { permissionsPolicyParserContent } from "./permissions-policy-parser";
 import { queryStringJsonContent } from "./query-string-json-converter";
 import { regexTesterContent } from "./regex-tester";
 import { semverCheckerContent } from "./semver-checker";
@@ -75,6 +76,7 @@ export const TOOL_CONTENT: Record<string, ToolContent> = {
   "cache-control-parser": cacheControlParserContent,
   "csp-parser": cspParserContent,
   "hsts-parser": hstsParserContent,
+  "permissions-policy-parser": permissionsPolicyParserContent,
   "basic-auth-header": basicAuthContent,
   "html-entity-encoder-decoder": htmlEntitiesContent,
   "color-converter": colorConverterContent,
