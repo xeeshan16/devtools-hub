@@ -28,6 +28,7 @@ import {
   KeyRound,
   KeySquare,
   LetterText,
+  Link,
   LockKeyhole,
   Link2,
   ListOrdered,
@@ -390,7 +391,7 @@ export const TOOLS: Tool[] = [
     category: "Encoding",
     icon: ListTree,
     keywords: ["url", "parse", "query string", "query parameters", "hostname", "port", "path", "fragment", "uri", "new URL"],
-    related: ["url-encoder-decoder", "html-entity-encoder-decoder", "regex-tester", "subnet-calculator", "http-status-codes", "curl-to-fetch", "query-string-json-converter"],
+    related: ["url-encoder-decoder", "html-entity-encoder-decoder", "regex-tester", "subnet-calculator", "http-status-codes", "curl-to-fetch", "query-string-json-converter", "link-header-parser"],
     phase: 3,
   },
   {
@@ -494,7 +495,7 @@ export const TOOLS: Tool[] = [
     category: "Text & Data",
     icon: Globe,
     keywords: ["http", "status code", "response code", "404", "500", "403", "401", "429", "rfc 9110", "error code", "redirect", "rest api"],
-    related: ["url-parser", "jwt-decoder", "timestamp-converter", "regex-tester", "curl-to-fetch", "cookie-parser", "basic-auth-header", "cache-control-parser", "csp-parser", "hsts-parser", "permissions-policy-parser"],
+    related: ["url-parser", "jwt-decoder", "timestamp-converter", "regex-tester", "curl-to-fetch", "cookie-parser", "basic-auth-header", "cache-control-parser", "csp-parser", "hsts-parser", "permissions-policy-parser", "link-header-parser"],
     phase: 3,
   },
   {
@@ -507,7 +508,7 @@ export const TOOLS: Tool[] = [
     category: "Formatting",
     icon: Terminal,
     keywords: ["curl", "fetch", "convert curl", "curl to javascript", "curl to js", "copy as curl", "http request", "api", "node fetch", "rest"],
-    related: ["json-to-typescript", "url-parser", "http-status-codes", "json-formatter", "cookie-parser", "basic-auth-header", "cache-control-parser", "csp-parser", "hsts-parser", "permissions-policy-parser"],
+    related: ["json-to-typescript", "url-parser", "http-status-codes", "json-formatter", "cookie-parser", "basic-auth-header", "cache-control-parser", "csp-parser", "hsts-parser", "permissions-policy-parser", "link-header-parser"],
     phase: 3,
   },
   {
@@ -559,7 +560,7 @@ export const TOOLS: Tool[] = [
     category: "Encoding",
     icon: Brackets,
     keywords: ["query string", "querystring", "query params", "url params", "search params", "urlsearchparams", "qs", "query to json", "json to query string", "form data", "x-www-form-urlencoded"],
-    related: ["url-parser", "url-encoder-decoder", "json-formatter", "curl-to-fetch"],
+    related: ["url-parser", "url-encoder-decoder", "json-formatter", "curl-to-fetch", "link-header-parser"],
     phase: 3,
   },
   {
@@ -703,6 +704,19 @@ export const TOOLS: Tool[] = [
     icon: CameraOff,
     keywords: ["permissions-policy", "feature-policy", "camera", "microphone", "geolocation", "iframe allow", "browsing-topics", "security headers", "structured fields", "allowlist"],
     related: ["csp-parser", "hsts-parser", "cookie-parser", "http-status-codes", "curl-to-fetch"],
+    phase: 3,
+  },
+  {
+    slug: "link-header-parser",
+    name: "Link Header Parser",
+    seoTitle: "Link Header Parser — HTTP Link & Pagination Inspector",
+    tagline: "Explain an HTTP Link header and pull out its pagination links",
+    description:
+      "Parse an HTTP Link header (RFC 8288), see each target and relation type, extract next/prev/last pagination links and catch syntax mistakes. Runs in your browser.",
+    category: "Text & Data",
+    icon: Link,
+    keywords: ["link header", "rfc 8288", "pagination", "rel next", "rel prev", "rel last", "preload", "preconnect", "canonical", "github api", "web linking"],
+    related: ["url-parser", "query-string-json-converter", "http-status-codes", "curl-to-fetch"],
     phase: 3,
   },
 ];

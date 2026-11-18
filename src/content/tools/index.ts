@@ -25,6 +25,7 @@ import { jsonFormatterContent } from "./json-formatter";
 import { jsonToTypescriptContent } from "./json-to-typescript";
 import { jwtDecoderContent } from "./jwt-decoder";
 import { jwtEncoderContent } from "./jwt-encoder";
+import { linkHeaderParserContent } from "./link-header-parser";
 import { loremIpsumGeneratorContent } from "./lorem-ipsum-generator";
 import { markdownTableContent } from "./markdown-table-generator";
 import { numberBaseContent } from "./number-base-converter";
@@ -77,6 +78,7 @@ export const TOOL_CONTENT: Record<string, ToolContent> = {
   "csp-parser": cspParserContent,
   "hsts-parser": hstsParserContent,
   "permissions-policy-parser": permissionsPolicyParserContent,
+  "link-header-parser": linkHeaderParserContent,
   "basic-auth-header": basicAuthContent,
   "html-entity-encoder-decoder": htmlEntitiesContent,
   "color-converter": colorConverterContent,
