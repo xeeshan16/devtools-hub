@@ -25,6 +25,7 @@ import {
   HardDrive,
   Hourglass,
   Hash,
+  Handshake,
   KeyRound,
   KeySquare,
   LetterText,
@@ -495,7 +496,7 @@ export const TOOLS: Tool[] = [
     category: "Text & Data",
     icon: Globe,
     keywords: ["http", "status code", "response code", "404", "500", "403", "401", "429", "rfc 9110", "error code", "redirect", "rest api"],
-    related: ["url-parser", "jwt-decoder", "timestamp-converter", "regex-tester", "curl-to-fetch", "cookie-parser", "basic-auth-header", "cache-control-parser", "csp-parser", "hsts-parser", "permissions-policy-parser", "link-header-parser"],
+    related: ["url-parser", "jwt-decoder", "timestamp-converter", "regex-tester", "curl-to-fetch", "cookie-parser", "basic-auth-header", "cache-control-parser", "csp-parser", "hsts-parser", "permissions-policy-parser", "link-header-parser", "accept-header-parser"],
     phase: 3,
   },
   {
@@ -508,7 +509,7 @@ export const TOOLS: Tool[] = [
     category: "Formatting",
     icon: Terminal,
     keywords: ["curl", "fetch", "convert curl", "curl to javascript", "curl to js", "copy as curl", "http request", "api", "node fetch", "rest"],
-    related: ["json-to-typescript", "url-parser", "http-status-codes", "json-formatter", "cookie-parser", "basic-auth-header", "cache-control-parser", "csp-parser", "hsts-parser", "permissions-policy-parser", "link-header-parser"],
+    related: ["json-to-typescript", "url-parser", "http-status-codes", "json-formatter", "cookie-parser", "basic-auth-header", "cache-control-parser", "csp-parser", "hsts-parser", "permissions-policy-parser", "link-header-parser", "accept-header-parser"],
     phase: 3,
   },
   {
@@ -664,7 +665,7 @@ export const TOOLS: Tool[] = [
     category: "Text & Data",
     icon: DatabaseZap,
     keywords: ["cache-control", "http caching", "max-age", "s-maxage", "no-cache", "no-store", "stale-while-revalidate", "immutable", "cdn", "rfc 9111"],
-    related: ["http-status-codes", "cookie-parser", "curl-to-fetch", "iso-duration-converter", "csp-parser", "hsts-parser"],
+    related: ["http-status-codes", "cookie-parser", "curl-to-fetch", "iso-duration-converter", "csp-parser", "hsts-parser", "accept-header-parser"],
     phase: 3,
   },
   {
@@ -717,6 +718,19 @@ export const TOOLS: Tool[] = [
     icon: Link,
     keywords: ["link header", "rfc 8288", "pagination", "rel next", "rel prev", "rel last", "preload", "preconnect", "canonical", "github api", "web linking"],
     related: ["url-parser", "query-string-json-converter", "http-status-codes", "curl-to-fetch"],
+    phase: 3,
+  },
+  {
+    slug: "accept-header-parser",
+    name: "Accept Header Parser",
+    seoTitle: "Accept Header Parser — Content Negotiation & q-Value Checker",
+    tagline: "Rank Accept, Accept-Language and Accept-Encoding values and see what a server should send",
+    description:
+      "Parse Accept, Accept-Language and Accept-Encoding headers, rank values by q weight, check content negotiation against what your server offers. Runs in your browser.",
+    category: "Text & Data",
+    icon: Handshake,
+    keywords: ["accept header", "content negotiation", "q value", "quality value", "accept-language", "accept-encoding", "accept-charset", "mime type", "rfc 9110", "406 not acceptable", "gzip br"],
+    related: ["http-status-codes", "curl-to-fetch", "cache-control-parser", "link-header-parser"],
     phase: 3,
   },
 ];
