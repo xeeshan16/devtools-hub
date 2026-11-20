@@ -15,6 +15,7 @@ import {
   FileCog,
   FileCheck,
   FileDigit,
+  FileDown,
   FileJson,
   FileLock,
   FileSignature,
@@ -496,7 +497,7 @@ export const TOOLS: Tool[] = [
     category: "Text & Data",
     icon: Globe,
     keywords: ["http", "status code", "response code", "404", "500", "403", "401", "429", "rfc 9110", "error code", "redirect", "rest api"],
-    related: ["url-parser", "jwt-decoder", "timestamp-converter", "regex-tester", "curl-to-fetch", "cookie-parser", "basic-auth-header", "cache-control-parser", "csp-parser", "hsts-parser", "permissions-policy-parser", "link-header-parser", "accept-header-parser"],
+    related: ["url-parser", "jwt-decoder", "timestamp-converter", "regex-tester", "curl-to-fetch", "cookie-parser", "basic-auth-header", "cache-control-parser", "csp-parser", "hsts-parser", "permissions-policy-parser", "link-header-parser", "accept-header-parser", "content-disposition-parser"],
     phase: 3,
   },
   {
@@ -509,7 +510,7 @@ export const TOOLS: Tool[] = [
     category: "Formatting",
     icon: Terminal,
     keywords: ["curl", "fetch", "convert curl", "curl to javascript", "curl to js", "copy as curl", "http request", "api", "node fetch", "rest"],
-    related: ["json-to-typescript", "url-parser", "http-status-codes", "json-formatter", "cookie-parser", "basic-auth-header", "cache-control-parser", "csp-parser", "hsts-parser", "permissions-policy-parser", "link-header-parser", "accept-header-parser"],
+    related: ["json-to-typescript", "url-parser", "http-status-codes", "json-formatter", "cookie-parser", "basic-auth-header", "cache-control-parser", "csp-parser", "hsts-parser", "permissions-policy-parser", "link-header-parser", "accept-header-parser", "content-disposition-parser"],
     phase: 3,
   },
   {
@@ -730,7 +731,20 @@ export const TOOLS: Tool[] = [
     category: "Text & Data",
     icon: Handshake,
     keywords: ["accept header", "content negotiation", "q value", "quality value", "accept-language", "accept-encoding", "accept-charset", "mime type", "rfc 9110", "406 not acceptable", "gzip br"],
-    related: ["http-status-codes", "curl-to-fetch", "cache-control-parser", "link-header-parser"],
+    related: ["http-status-codes", "curl-to-fetch", "cache-control-parser", "link-header-parser", "content-disposition-parser"],
+    phase: 3,
+  },
+  {
+    slug: "content-disposition-parser",
+    name: "Content-Disposition Parser",
+    seoTitle: "Content-Disposition Parser & Generator — filename* Decoder",
+    tagline: "Decode a Content-Disposition header and build one for any file name",
+    description:
+      "Parse Content-Disposition headers (RFC 6266), decode filename* (RFC 8187), see the name a browser saves, catch mistakes and build headers for any file name. Runs in your browser.",
+    category: "Text & Data",
+    icon: FileDown,
+    keywords: ["content-disposition", "filename*", "attachment", "inline", "download file name", "rfc 6266", "rfc 8187", "form-data", "multipart", "utf-8 filename", "save as"],
+    related: ["http-status-codes", "curl-to-fetch", "url-encoder-decoder", "accept-header-parser", "link-header-parser"],
     phase: 3,
   },
 ];
