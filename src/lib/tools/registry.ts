@@ -37,6 +37,7 @@ import {
   ListTree,
   Network,
   Palette,
+  Route,
   Quote,
   RectangleEllipsis,
   Regex,
@@ -497,7 +498,7 @@ export const TOOLS: Tool[] = [
     category: "Text & Data",
     icon: Globe,
     keywords: ["http", "status code", "response code", "404", "500", "403", "401", "429", "rfc 9110", "error code", "redirect", "rest api"],
-    related: ["url-parser", "jwt-decoder", "timestamp-converter", "regex-tester", "curl-to-fetch", "cookie-parser", "basic-auth-header", "cache-control-parser", "csp-parser", "hsts-parser", "permissions-policy-parser", "link-header-parser", "accept-header-parser", "content-disposition-parser"],
+    related: ["url-parser", "jwt-decoder", "timestamp-converter", "regex-tester", "curl-to-fetch", "cookie-parser", "basic-auth-header", "cache-control-parser", "csp-parser", "hsts-parser", "permissions-policy-parser", "link-header-parser", "accept-header-parser", "content-disposition-parser", "forwarded-header-parser"],
     phase: 3,
   },
   {
@@ -510,7 +511,7 @@ export const TOOLS: Tool[] = [
     category: "Formatting",
     icon: Terminal,
     keywords: ["curl", "fetch", "convert curl", "curl to javascript", "curl to js", "copy as curl", "http request", "api", "node fetch", "rest"],
-    related: ["json-to-typescript", "url-parser", "http-status-codes", "json-formatter", "cookie-parser", "basic-auth-header", "cache-control-parser", "csp-parser", "hsts-parser", "permissions-policy-parser", "link-header-parser", "accept-header-parser", "content-disposition-parser"],
+    related: ["json-to-typescript", "url-parser", "http-status-codes", "json-formatter", "cookie-parser", "basic-auth-header", "cache-control-parser", "csp-parser", "hsts-parser", "permissions-policy-parser", "link-header-parser", "accept-header-parser", "content-disposition-parser", "forwarded-header-parser"],
     phase: 3,
   },
   {
@@ -745,6 +746,19 @@ export const TOOLS: Tool[] = [
     icon: FileDown,
     keywords: ["content-disposition", "filename*", "attachment", "inline", "download file name", "rfc 6266", "rfc 8187", "form-data", "multipart", "utf-8 filename", "save as"],
     related: ["http-status-codes", "curl-to-fetch", "url-encoder-decoder", "accept-header-parser", "link-header-parser"],
+    phase: 3,
+  },
+  {
+    slug: "forwarded-header-parser",
+    name: "Forwarded Header Parser",
+    seoTitle: "Forwarded Header Parser — X-Forwarded-For to Forwarded",
+    tagline: "Decode a Forwarded header hop by hop and convert X-Forwarded-For",
+    description:
+      "Parse Forwarded headers (RFC 7239): see each proxy hop's for, by, host and proto, classify client IPs, catch quoting mistakes, convert X-Forwarded-* headers. Runs in your browser.",
+    category: "Text & Data",
+    icon: Route,
+    keywords: ["forwarded", "x-forwarded-for", "x-forwarded-proto", "x-forwarded-host", "client ip", "reverse proxy", "load balancer", "rfc 7239", "real ip", "proxy chain", "ipv6"],
+    related: ["http-status-codes", "subnet-calculator", "url-parser", "curl-to-fetch", "accept-header-parser"],
     phase: 3,
   },
 ];

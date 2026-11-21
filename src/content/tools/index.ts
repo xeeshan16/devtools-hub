@@ -1,6 +1,7 @@
 import type { ToolContent } from "@/content/types";
 import { acceptHeaderParserContent } from "./accept-header-parser";
 import { contentDispositionParserContent } from "./content-disposition-parser";
+import { forwardedHeaderParserContent } from "./forwarded-header-parser";
 import { base32Content } from "./base32-encoder-decoder";
 import { basicAuthContent } from "./basic-auth-header";
 import { base64Content } from "./base64-encoder-decoder";
@@ -83,6 +84,7 @@ export const TOOL_CONTENT: Record<string, ToolContent> = {
   "link-header-parser": linkHeaderParserContent,
   "accept-header-parser": acceptHeaderParserContent,
   "content-disposition-parser": contentDispositionParserContent,
+  "forwarded-header-parser": forwardedHeaderParserContent,
   "basic-auth-header": basicAuthContent,
   "html-entity-encoder-decoder": htmlEntitiesContent,
   "color-converter": colorConverterContent,
