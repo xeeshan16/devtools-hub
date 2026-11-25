@@ -11,6 +11,7 @@ import {
   Clock,
   CodeXml,
   Cookie,
+  Crosshair,
   DatabaseZap,
   FileCog,
   FileCheck,
@@ -95,7 +96,7 @@ export const TOOLS: Tool[] = [
     category: "Formatting",
     icon: Braces,
     keywords: ["json", "beautify", "pretty print", "minify", "validate", "lint"],
-    related: ["yaml-json-converter", "base64-encoder-decoder", "jwt-decoder", "csv-json-converter", "json-to-typescript", "json-escape-unescape", "curl-to-fetch"],
+    related: ["yaml-json-converter", "base64-encoder-decoder", "jwt-decoder", "csv-json-converter", "json-to-typescript", "json-escape-unescape", "curl-to-fetch", "json-pointer"],
     phase: 1,
   },
   {
@@ -433,7 +434,7 @@ export const TOOLS: Tool[] = [
     category: "Formatting",
     icon: FileType,
     keywords: ["typescript", "ts", "interface", "type", "json to ts", "json to interface", "types", "api response", "codegen", "quicktype"],
-    related: ["json-formatter", "yaml-json-converter", "case-converter", "curl-to-fetch"],
+    related: ["json-formatter", "yaml-json-converter", "case-converter", "curl-to-fetch", "json-pointer"],
     phase: 3,
   },
   {
@@ -759,6 +760,19 @@ export const TOOLS: Tool[] = [
     icon: Route,
     keywords: ["forwarded", "x-forwarded-for", "x-forwarded-proto", "x-forwarded-host", "client ip", "reverse proxy", "load balancer", "rfc 7239", "real ip", "proxy chain", "ipv6"],
     related: ["http-status-codes", "subnet-calculator", "url-parser", "curl-to-fetch", "accept-header-parser"],
+    phase: 3,
+  },
+  {
+    slug: "json-pointer",
+    name: "JSON Pointer Tester",
+    seoTitle: "JSON Pointer Tester — Evaluate RFC 6901 Paths",
+    tagline: "Evaluate a JSON Pointer and list every path in a document",
+    description:
+      "Test JSON Pointers (RFC 6901) against your JSON: see the value, escape ~ and / in keys, convert #/ URI fragments and list every pointer. Runs in your browser.",
+    category: "Text & Data",
+    icon: Crosshair,
+    keywords: ["json pointer", "rfc 6901", "json patch", "$ref", "openapi", "json schema", "json path", "uri fragment", "~1", "~0"],
+    related: ["json-formatter", "json-to-typescript", "yaml-json-converter", "json-escape-unescape"],
     phase: 3,
   },
 ];
